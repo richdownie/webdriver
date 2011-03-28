@@ -130,26 +130,30 @@ module WatirCukeHelpers
       fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
     end
   end
-
+  
   def find_text_field(type, text)
-    if type == Fixnum then
-      type.to_i
+    type.to_s
+    if @browser.text_field(:id, type).exists? then
+       @browser.text_field(:id, type).set(text)     
+    elsif 
+      @browser.text_field(:name, type).exists? then
+      @browser.text_field(:name, type).set(text)
+    elsif 
+      @browser.text_field(:value, type).exists? then
+      @browser.text_field(:value, type).set(text)  
+    elsif 
+      @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).exists? then
+      @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).set(text)    
+    else
+      fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+    end
+  end
+  
+  def find_text_field_by_id(type, text)
+    type.to_i
+    if @browser.text_field(:id, type).exists? then
       @browser.text_field(:index, type).click
     end
-      if @browser.text_field(:id, type).exists? then
-         @browser.text_field(:id, type).set(text)     
-      elsif 
-        @browser.text_field(:name, type).exists? then
-        @browser.text_field(:name, type).set(text)
-      elsif 
-        @browser.text_field(:value, type).exists? then
-        @browser.text_field(:value, type).set(text)  
-      elsif 
-        @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).exists? then
-        @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).set(text)    
-      else
-        fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
-      end
   end
   
   def find_span(type)
