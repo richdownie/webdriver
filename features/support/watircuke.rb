@@ -74,17 +74,19 @@ module WatirCukeHelpers
     if type == Fixnum then
       type.to_i
       @browser.link(:index, type).click
-    end
-    if @browser.link(:id, type).exists? then
-       @browser.link(:id, type).click
-     elsif 
-       @browser.link(:text, type).exists? then
-       @browser.link(:text, type).click
-     elsif
-      @browser.link(:class, type).exists? then
-      @browser.link(:class, type).click
     else
-      fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+      type.to_s
+      if @browser.link(:id, type).exists? then
+         @browser.link(:id, type).click
+       elsif 
+         @browser.link(:text, type).exists? then
+         @browser.link(:text, type).click
+       elsif
+        @browser.link(:class, type).exists? then
+        @browser.link(:class, type).click
+      else
+        fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+      end  
     end
   end
 
@@ -208,9 +210,6 @@ module WatirCukeHelpers
     if @browser.table(:id, type).exists? then
        @browser.table(:id, type)[row][2].click
     elsif
-       @browser.table(:name, type).exists? then
-       @browser.table(:name, type)[row][1].click
-    elsif
        @browser.table(:index, type).exists? then
        @browser.table(:index, type)[row][1].click
     elsif
@@ -226,12 +225,6 @@ module WatirCukeHelpers
     cell = cell.to_i
     if @browser.table(:id, type).exists? then
        @browser.table(:id, type)[row][cell].click
-    elsif
-       @browser.table(:name, type).exists? then
-       @browser.table(:name, type)[row][cell].click
-    elsif
-       @browser.table(:index, type).exists? then
-       @browser.table(:index, type)[row][cell].click
     elsif
       @browser.table(:class, /(^|\s)#{type}(\s|$)/).exists? then
       cell = @browser.table(:class, /(^|\s)#{type}(\s|$)/)[row][cell]
