@@ -74,10 +74,10 @@ module WatirCukeHelpers
 
   def find_link(type)
     type.to_s
-    if @browser.link(:text, type.to_s).when_present.click then
-       @browser.link(:text, type.to_s).click
- elsif @browser.link(:class, /(^|\s)#{type.to_s}(\s|$)/).exists? then
-       @browser.link(:class, /(^|\s)#{type.to_s}(\s|$)/).click
+    if @browser.link(:text, type).exists? then
+       @browser.link(:text, type).click
+ elsif @browser.link(:class, /(^|\s)#{type}(\s|$)/).exists? then
+       @browser.link(:class, /(^|\s)#{type}(\s|$)/).click
     else
       fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
     end  
