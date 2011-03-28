@@ -80,11 +80,7 @@ Scenario: Import Items valid csv
   And I click the "Logout" link
 
 Scenario: Import Items invalid csv duplicate item_id
-  And I am on the companies page
-  And I click the "A&P" link
-  And I click the "ITEMS" div
-  And I click the "Manage Items" link
-  And I click the "Import Items" link
+  * I am on the import items page
   And I upload "invalid_item_import.csv" to the "import_uploaded_data" file field
   And I wait for "3" seconds
   And I click the "Next" link
@@ -95,9 +91,7 @@ Scenario: Import Items invalid csv duplicate item_id
   And I click the "Logout" link
 
 Scenario: Import Items from Items List
-  And I am on the items page
-  And I click the "Manage Items" link
-  And I click the "Import Items" link
+  * I am on the import items page
   And I upload "no_company_item_import.csv" to the "import_uploaded_data" file field
   And I wait for "3" seconds
   And I click the "Next" link
