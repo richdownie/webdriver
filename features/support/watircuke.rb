@@ -74,8 +74,9 @@ module WatirCukeHelpers
        @browser.link(:text, type).exists? then
        @browser.link(:text, type).click
     elsif 
-      @browser.link(:index, type).exists? then
-      @browser.link(:index, type).click
+       type == Fixnum then
+       type.to_i
+       @browser.link(:index, type).click
    elsif
       @browser.link(:class, type).exists? then
       @browser.link(:class, type).click

@@ -90,11 +90,11 @@ Given /I upload "(.*)" to the "(.*)" file field/ do |file, type|
 end
 
 Then /^I should (NOT )?see the text "([^\"]*)"$/ do |visibility, text|
-  expected = (visibility.to_s.strip == 'NOT') ? assert_false(@browser.contains_text(text)) : assert(@browser.contains_text(text))
+  expected = (visibility.to_s.strip == 'NOT') ? assert_false(@browser.text) : assert(@browser.text)
 end
 
 Then /^I should (NOT )?see the exact text "([^\"]*)"$/ do |visibility, text|
-  expected = (visibility.to_s.strip == 'NOT') ? assert_not_equal(@browser.contains_text(text), text) : assert_equal(@browser.contains_text(text))
+  expected = (visibility.to_s.strip == 'NOT') ? assert_not_equal(@browser.text, text) : assert_equal(@browser.text)
 end
 
 Then /I am redirected to "(.*)"/ do |text|

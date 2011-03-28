@@ -20,7 +20,7 @@ Scenario: Create a new Item at the Hub
   Given I am inside the Hub Company
   And I click the "ITEMS" div
   And I wait for "3" seconds
-  # And I click the "Manage Items" link
+  And I click the "Manage Items" link
   And I click the "Add Item" link
   And I fill in the text field "item_name" with "TestItem"
   And I click the "SAVE" button
@@ -60,7 +60,7 @@ Scenario: Invalid Item Save
   And I wait for "3" seconds
   And I click the "ITEMS" div
   And I wait for "3" seconds
-  # And I click the "Manage Items" link
+  And I click the "Manage Items" link
   And I click the "Add Item" link
   And I wait for "3" seconds
   And I click the "SAVE" button
@@ -71,7 +71,7 @@ Scenario: Invalid Item Save
 Scenario: Link an Item to google.com
   Given I am inside the Hub Company
   And I click the "ITEMS" div
-  # And I click the "Manage Items" link
+  And I click the "Manage Items" link
   And I click the "Add Item" link
   And I fill in the text field "item_name" with "TestItem"
   And I click the "Or click here to link to an existing document" link
@@ -83,7 +83,7 @@ Scenario: Import Items valid csv
   And I am on the companies page
   And I click the "A&P" link
   And I click the "ITEMS" div
-  # And I click the "Manage Items" link
+  And I click the "Manage Items" link
   And I click the "Import Items" link
   And I upload "item_import.csv" to the "import_uploaded_data" file field
   And I wait for "3" seconds
@@ -100,7 +100,7 @@ Scenario: Import Items invalid csv duplicate item_id
   And I am on the companies page
   And I click the "A&P" link
   And I click the "ITEMS" div
-  # And I click the "Manage Items" link
+  And I click the "Manage Items" link
   And I click the "Import Items" link
   And I upload "invalid_item_import.csv" to the "import_uploaded_data" file field
   And I wait for "3" seconds
@@ -113,7 +113,7 @@ Scenario: Import Items invalid csv duplicate item_id
 
 Scenario: Import Items from Items List
   And I am on the items page
-  # And I click the "Manage Items" link
+  And I click the "Manage Items" link
   And I click the "Import Items" link
   And I upload "no_company_item_import.csv" to the "import_uploaded_data" file field
   And I wait for "3" seconds
@@ -148,20 +148,20 @@ Scenario: Add Multiple Documents to Item
 
 Scenario: Export Items
   And I am on the items page
-  # And I click the "Manage Items" link
+  And I click the "Manage Items" link
   And I click the "Export Items" link
   And I am on the my company page
   And I click the "ITEMS" div
-  # And I click the "Manage Items" link
+  And I click the "Manage Items" link
   And I click the "Export Items" link
   And I am on the companies page
   And I click the "A&P" link
   And I click the "ITEMS" div
-  # And I click the "Manage Items" link
+  And I click the "Manage Items" link
   And I click the "Add Item" link
   And I fill in the text field "item_name" with "Sample1"
   And I click the "item_submit" button
-  # And I click the "Manage Items" link
+  And I click the "Manage Items" link
   And I click the "Export Items" link
   
 Scenario: Delete an Item
