@@ -43,6 +43,10 @@ Given /I click the "(.*)" link/ do |type|
   find_link(type)
 end
 
+Given /I hover the "(.*)" link/ do |type|
+  hover_link(type)
+end
+  
 Given /I click the "(.*)" radio button/ do |type|
   find_radio_button(type)
 end

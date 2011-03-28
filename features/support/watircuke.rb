@@ -68,21 +68,20 @@ module WatirCukeHelpers
   end
 
   def find_link(type)
-    # if @browser.link(:id, type).exists? then
-    #    @browser.link(:id, type).click
-    #  elsif 
-    #    @browser.link(:text, type).wait_until_present then
-       @browser.link(:text, type).when_present.click
-   #  elsif 
-   #     type == Fixnum then
-   #     type.to_i
-   #     @browser.link(:index, type).click
-   # elsif
-   #    @browser.link(:class, type).exists? then
-   #    @browser.link(:class, type).click
-   #  else
-   #    fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
-   #  end
+    if @browser.link(:id, type).exists? then
+       @browser.link(:id, type).click
+     elsif 
+       @browser.link(:text, type).exists? then
+       @browser.link(:text, type).click
+    elsif 
+      @browser.link(:index, type).exists? then
+      @browser.link(:index, type).click
+   elsif
+      @browser.link(:class, type).exists? then
+      @browser.link(:class, type).click
+    else
+      fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+    end
   end
 
   def find_radio_button(type)
@@ -132,28 +131,27 @@ module WatirCukeHelpers
   end
 
   def find_text_field(type, text)
-    # if text == "Today"
-    #   @browser.text_field(:index, type).set("#{@today}")
-    # else  
-    #   if 
-        @browser.text_field(:id, type).when_present.set(text)    
-      # elsif 
-      #     @browser.text_field(:name, type).exists? then
-      #     @browser.text_field(:name, type).set(text)
-      #   elsif 
-      #     @browser.text_field(:value, type).exists? then
-      #     @browser.text_field(:value, type).set(text)
-      #   elsif 
-      #        type == Fixnum then
-      #        type.to_i
-      #        @browser.text_field(:index, type).click   
-      #   elsif 
-      #     @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).exists? then
-      #     @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).set(text)    
-      #   else
-      #     fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
-      #   end
-    # end
+    if text == "Today"
+      @browser.text_field(:index, type).set("#{@today}")
+    else  
+      if @browser.text_field(:id, type).exists? then
+         @browser.text_field(:id, type).set(text)     
+      elsif 
+        @browser.text_field(:name, type).exists? then
+        @browser.text_field(:name, type).set(text)
+      elsif 
+        @browser.text_field(:value, type).exists? then
+        @browser.text_field(:value, type).set(text)
+      elsif 
+        @browser.text_field(:index, type).exists? then
+        @browser.text_field(:index, type).set(text)     
+      elsif 
+        @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).exists? then
+        @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).set(text)    
+      else
+        fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+      end
+    end
   end
   
   def find_span(type)
@@ -190,6 +188,9 @@ module WatirCukeHelpers
     elsif
        @browser.div(:text, type).exists? then
        @browser.div(:text, type).click
+    elsif
+      @browser.div(:index, type).exists? then
+      @browser.div(:index, type).click
     elsif
       @browser.div(:class, type).exists? then
       @browser.div(:class, type).click
