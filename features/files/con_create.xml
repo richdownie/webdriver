@@ -1,0 +1,23 @@
+<Contact>
+  <ID read_only="Y"></ID>
+  <Saluation/>
+  <FirstName>Api</FirstName>
+  <LastName>Cucumber</LastName>
+  <Title>Community Admin</Title>
+  <Email>aju_api_user@rollstream.com</Email>
+  <Broker>false</Broker>
+  <WorkPhone>1000000001</WorkPhone>
+  <MobilePhone>2000000001</MobilePhone>
+  <Address>
+    <Line1>7921 Jones Branch Dr</Line1>
+    <Line2></Line2>
+    <Line3></Line3>
+    <City>McLean</City>
+    <State>VA</State>
+    <Country>USA</Country>
+    <Zipcode>22102</Zipcode>
+  </Address>
+  <CustomFields/>
+  <Notes>1/28/2009 14:04</Notes>
+  <Company refID="https://qadaffyduck.rollstream.com/api/v2000/Company/1.xml" read_only="Y">daffyduck</Company>
+</Contact>

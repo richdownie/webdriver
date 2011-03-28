@@ -1,0 +1,12 @@
+source "http://rubygems.org"
+
+gem "activesupport", "2.3.8"
+gem "cucumber"
+gem "nokogiri"
+gem "broach"
+gem "firewatir"
+gem "rest-client"
+gem "hpricot"
+gem "hpricot --platform=mswin32"
+gem "watir-webdriver"
+gem "rest-client"

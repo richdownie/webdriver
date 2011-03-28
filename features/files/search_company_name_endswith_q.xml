@@ -1,0 +1,9 @@
+<Search>
+  <Group conditions_operand="any" >
+    <Condition model="Company">
+      <Attribute>name</Attribute>
+      <Operator>ends_with</Operator>
+      <Values><Value>q</Value></Values>
+    </Condition>
+  </Group>
+</Search>

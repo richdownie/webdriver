@@ -1,0 +1,9 @@
+<Search>
+  <Group conditions_operand="any" >
+    <Condition model="Company">
+      <Attribute>company_id</Attribute>
+      <Operator>contains</Operator>
+      <Values><Value>a</Value></Values>
+    </Condition>
+  </Group>
+</Search>

@@ -1,0 +1,64 @@
+# Logfile created on Tue Feb 02 07:30:29 -0500 2010 by /
+Scenario: Only Community Administrators can view disputes:4 ~ <"https://qaauto.rollstream.com/"> expected but was
+<"https://qaauto.rollstream.com/disputes">.
+Scenario: Crud a Company Alert:4 ~ Sorry, I wasn't able to find the 'Edit' element 
+Scenario: Permissions for a Spoke Contact:18 ~ Sorry, I wasn't able to find the 'group_permissions_5_78_1025' element 
+Scenario: Permissions for a Company Administrator:30 ~ Sorry, I wasn't able to find the 'group_permissions_6_78_1025' element 
+Scenario: Permissions for an Employee:42 ~ Sorry, I wasn't able to find the 'group_permissions_7_78_1025' element 
+Scenario: Permissions for a Project Administrator:54 ~ Sorry, I wasn't able to find the 'group_permissions_8_78_1025' element 
+Scenario: Permissions view Number Field only:66 ~ Sorry, I wasn't able to find the 'field_permissions_6_120_1034' element 
+Scenario: Edit NUMBER field as a Company Admin Only:81 ~ Sorry, I wasn't able to find the 'field_permissions_6_120_1035' element 
+Scenario: Crud a Contact Alert:4 ~ Sorry, I wasn't able to find the 'Edit' element 
+Scenario: Permissions for a Spoke Contact:18 ~ Sorry, I wasn't able to find the 'group_permissions_5_127_1025' element 
+Scenario: Permissions for a Company Administrator:30 ~ Sorry, I wasn't able to find the 'group_permissions_6_127_1025' element 
+Scenario: Permissions for an Employee:42 ~ Sorry, I wasn't able to find the 'group_permissions_7_127_1025' element 
+Scenario: Permissions for a Project Administrator:54 ~ Sorry, I wasn't able to find the 'group_permissions_8_127_1025' element 
+Scenario: Permissions view TEXT AREA Only:66 ~ Sorry, I wasn't able to find the 'field_permissions_7_274_1035' element 
+Scenario: Edit T_TEXT field as a Project Administrator Only:81 ~ Sorry, I wasn't able to find the 'field_permissions_8_271_1035' element 
+Scenario: Verify Email Inbox:4 ~ Unable to locate element, using :class, "new_ui_system_button_inner"
+Scenario: Create Dispute with NO participants and check emails:8 ~ Sorry, I wasn't able to find the '1' element 
+Scenario: Create Dispute with 1 participant and check emails:25 ~ Sorry, I wasn't able to find the '3' element 
+Scenario: A NON-CA Person can be a dispute creator (CREATE, EDIT[OWN], POST):40 ~ Sorry, I wasn't able to find the '1' element 
+Scenario: A NON-CA Person can be a dispute mediator (VIEW, POST, EDIT, RESOLVE, RE-OPEN):76 ~ Sorry, I wasn't able to find the '1' element 
+Scenario: A NON-CA Person can be a dispute participant (VIEW, POST):113 ~ Sorry, I wasn't able to find the '1' element 
+Scenario: A NON-CA Person can be an EDIT dispute participant (VIEW, POST, EDIT):140 ~ Sorry, I wasn't able to find the '1' element 
+Scenario: Accessing a shipping dispute as a community administrator for a community with access to dispute management:10 ~ <nil> is not true.
+Scenario: Add New Text Column from Shipping page:8 ~ Sorry, I wasn't able to find the 'Add a New Text Column' element 
+Scenario: Create Dispute with NO participants and check emails:8 ~ Sorry, I wasn't able to find the 'Logout' element 
+Scenario: A NON-CA Person can be a dispute creator (CREATE, EDIT[OWN], POST):40 ~ Sorry, I wasn't able to find the 'dispute_responder_id' element 
+Scenario: Create Dispute with NO participants and check emails:8 ~ Sorry, I wasn't able to find the 'Logout' element 
+Scenario: Permissions for an Employee:42 ~ <nil> is not true.
+Scenario: Permissions view TEXT AREA Only:66 ~ <nil> is not true.
+Scenario: Edit T_TEXT field as a Project Administrator Only:81 ~ Sorry, I wasn't able to find the 'text field large' element 
+Scenario: Edit T_TEXT field as a Project Administrator Only:81 ~ undefined method `[]' for nil:NilClass
+Scenario: Edit T_TEXT field as a Project Administrator Only:81 ~ undefined method `[]' for nil:NilClass
+Scenario: Edit T_TEXT field as a Project Administrator Only:81 ~ Sorry, I wasn't able to find the 'Delete' element 
+Scenario: Edit T_TEXT field as a Project Administrator Only:81 ~ Sorry, I wasn't able to find the 'Delete' element 
+Scenario: Edit T_TEXT field as a Project Administrator Only:81 ~ undefined method `[]' for nil:NilClass
+Scenario: Edit T_TEXT field as a Project Administrator Only:81 ~ Sorry, I wasn't able to find the 'Delete' element 
+Scenario: Edit T_TEXT field as a Project Administrator Only:81 ~ Sorry, I wasn't able to find the 'Delete' element 
+Scenario: Permissions for a Spoke Contact:19 ~ Sorry, I wasn't able to find the 'field_permissions_5_91_1035' element 
+Scenario: Permissions for a Company Administrator:31 ~ Sorry, I wasn't able to find the 'field_permissions_6_91_1035' element 
+Scenario: Permissions for an Employee:43 ~ Sorry, I wasn't able to find the 'field_permissions_7_91_1035' element 
+Scenario: Permissions for a Project Administrator:55 ~ Sorry, I wasn't able to find the 'field_permissions_8_91_1035' element 
+Scenario: Permissions view TEXT AREA Only:67 ~ Sorry, I wasn't able to find the 'field_permissions_7_92_1034' element 
+Scenario: Edit T_TEXT field as a Project Administrator Only:82 ~ Sorry, I wasn't able to find the 'field_permissions_8_92_1035' element 
+Scenario: Permissions for a Spoke Contact:19 ~ Sorry, I wasn't able to find the 'field_permissions_5_91_1035' element 
+Scenario: Permissions for a Company Administrator:31 ~ Sorry, I wasn't able to find the 'field_permissions_6_91_1035' element 
+Scenario: Permissions for a Spoke Contact:19 ~ <nil> is not true.
+Scenario: Permissions for a Company Administrator:31 ~ <nil> is not true.
+Scenario: Permissions for an Employee:43 ~ <nil> is not true.
+Scenario: Permissions for a Project Administrator:55 ~ <nil> is not true.
+Scenario: Permissions for a Spoke Contact:19 ~ <nil> is not true.
+Scenario: Permissions for a Spoke Contact:19 ~ <nil> is not true.
+Scenario: Permissions for a Company Administrator:31 ~ Sorry, I wasn't able to find the 'field_permissions_6_95_1035' element 
+Scenario: Permissions view Number Field only:67 ~ <nil> is not true.
+Scenario: Edit NUMBER field as a Company Admin Only:82 ~ Sorry, I wasn't able to find the 'field text large' element 
+Scenario: Permissions for a Spoke Contact:19 ~ <nil> is not true.
+Scenario: Permissions for a Company Administrator:30 ~ <nil> is not true.
+Scenario: Permissions for an Employee:41 ~ <nil> is not true.
+Scenario: Permissions for a Project Administrator:53 ~ <nil> is not true.
+Scenario: Permissions view Number Field only:64 ~ SIGTERM
+Scenario: Permissions view Number Field only:64 ~ <nil> is not true.
+Scenario: Permissions view Number Field only:64 ~ <nil> is not true.
+Scenario: Permissions view Number Field only:64 ~ <false> is not true.

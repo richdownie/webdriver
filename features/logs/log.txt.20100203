@@ -1,0 +1,15 @@
+# Logfile created on Wed Feb 03 14:00:42 -0500 2010 by /
+Scenario: A Spoke Contact can submit a Registration Request:4 ~ Unable to locate element, using :class, /div/
+Scenario: A Spoke Contact can submit a Registration Request:4 ~ Unable to locate element, using :class, /div/
+Scenario: A Spoke Contact can submit a Registration Request:4 ~ Textfield id and request_first_name is read only.
+Scenario: A Spoke Contact can submit a Registration Request:4 ~ Sorry, I wasn't able to find the 'request_first_name' element 
+Scenario: A Spoke Contact can submit a Registration Request:4 ~ Sorry, I wasn't able to find the 'request_first_name' element 
+Scenario: A Spoke Contact can submit a Registration Request:4 ~ could not find what you asked for
+Scenario: A Spoke Contact can submit a Registration Request:4 ~ Sorry, I wasn't able to find the 'request_first_name' element 
+Scenario: A Spoke Contact can submit a Registration Request:4 ~  window is undefined
+Scenario: A Spoke Contact can submit a Registration Request:4 ~ Textfield id and request_first_name is read only.
+Scenario: A Spoke Contact can submit a Registration Request:4 ~ can't convert String into time interval
+Scenario: A Spoke Contact can submit a Registration Request:4 ~ can't convert String into time interval
+Scenario: A Spoke Contact can submit a Registration Request:4 ~ can't convert String into time interval
+Scenario: Check Permissions for Pre-Approver:32 ~ could not find what you asked for
+Scenario: Check Permissions security for Pre-Approver and Approver:32 ~ SIGTERM

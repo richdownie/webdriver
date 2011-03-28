@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Company>
+  <ID read_only="Y">7</ID>
+  <Name>Leatherman Inc.</Name>
+  <CompanyID>LEATHERman</CompanyID>
+  <WebsiteURL/>
+  <Email/>
+  <Phone/>
+  <Fax/>
+  <Employees/>
+  <Latitude/>
+  <Longtitude/>
+  <Address>
+    <Line1/>
+    <Line2/>
+    <Line3/>
+    <City/>
+    <State/>
+    <Country/>
+    <Zipcode/>
+  </Address>
+  <CustomFields/>
+  <Notes>updated</Notes>
+</Company>
+

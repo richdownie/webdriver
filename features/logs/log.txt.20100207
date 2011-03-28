@@ -1,0 +1,43 @@
+# Logfile created on Thu Feb 04 09:47:17 -0500 2010 by /
+Scenario: Add New Text Column from Shipping page:8 ~ Can't find mapping from "the shipping issue type page" to a path.
+Now, go and add a mapping in /Users/rdownie/rollstream/communtity_service/features/support/paths.rb
+Scenario: Add New Text Column from Shipping page:8 ~ Can't find mapping from "the shipping issue type page" to a path.
+Now, go and add a mapping in /Users/rdownie/rollstream/communtity_service/features/support/paths.rb
+Scenario: Accessing as a logged-in spoke contact:4 ~ Can't find mapping from "the pricing issue type page" to a path.
+Now, go and add a mapping in /Users/rdownie/rollstream/communtity_service/features/support/paths.rb
+Scenario: Accessing as a logged-in spoke contact:4 ~ Can't find mapping from "the shipping issue type page" to a path.
+Now, go and add a mapping in /Users/rdownie/rollstream/communtity_service/features/support/paths.rb
+Scenario: Accessing as a logged-in spoke contact:4 ~ <"https://qaauto.rollstream.com/"> expected but was
+<"https://qaauto.rollstream.com/dispute_types/6">.
+Scenario: Accessing as a community administrator for a community without access to issue resolution:17 ~ Can't find mapping from "the pricing issue type page" to a path.
+Now, go and add a mapping in /Users/rdownie/rollstream/communtity_service/features/support/paths.rb
+Scenario: Accessing as a community administrator for a community without access to issue resolution:17 ~ Can't find mapping from "the issues page" to a path.
+Now, go and add a mapping in /Users/rdownie/rollstream/communtity_service/features/support/paths.rb
+Scenario: Accessing as a community administrator for a community without access to issue resolution:17 ~ <"https://qaauto.rollstream.com/"> expected but was
+<"https://qaauto.rollstream.com/disputes">.
+Scenario: Accessing as a community administrator for a community without access to issue resolution:17 ~ Can't find mapping from "the new issues page" to a path.
+Now, go and add a mapping in /Users/rdownie/rollstream/communtity_service/features/support/paths.rb
+Scenario: Accessing as a community administrator for a community without access to issue resolution:17 ~ Can't find mapping from "the the shipping issue line items page" to a path.
+Now, go and add a mapping in /Users/rdownie/rollstream/communtity_service/features/support/paths.rb
+Scenario: Create Issue with NO participants and check emails:8 ~ Can't find mapping from "the pricing issue type page" to a path.
+Now, go and add a mapping in /Users/rdownie/rollstream/communtity_service/features/support/paths.rb
+Scenario: Create Issue with NO participants and check emails:8 ~ Can't find mapping from "the pricing issue type page" to a path.
+Now, go and add a mapping in /Users/rdownie/rollstream/communtity_service/features/support/paths.rb
+Scenario: Create Issue with NO participants and check emails:8 ~ Can't find mapping from "the edit shipping issue type page" to a path.
+Now, go and add a mapping in /Users/rdownie/rollstream/communtity_service/features/support/paths.rb
+Scenario: Create Issue with NO participants and check emails:8 ~ Can't find mapping from "the edit shipping issue type page" to a path.
+Now, go and add a mapping in /Users/rdownie/rollstream/communtity_service/features/support/paths.rb
+Scenario: Create Issue with NO participants and check emails:8 ~ Sorry, I wasn't able to find the '1' element 
+Scenario: Create Issue with 1 participant and check emails:25 ~ Can't find mapping from "the edit pricing issue type page" to a path.
+Now, go and add a mapping in /Users/rdownie/rollstream/communtity_service/features/support/paths.rb
+Scenario: A NON-CA Person can be a issue creator (CREATE, EDIT[OWN], POST):40 ~ Sorry, I wasn't able to find the 'issues_responder_id' element 
+Scenario: A NON-CA Person can be a issue creator (CREATE, EDIT[OWN], POST):40 ~ Sorry, I wasn't able to find the 'issues_responder_id' element 
+Scenario: A NON-CA Person can be a issue creator (CREATE, EDIT[OWN], POST):40 ~ Sorry, I wasn't able to find the 'issues_responder_id' element 
+Scenario: A NON-CA Person can be a issue mediator (VIEW, POST, EDIT, RESOLVE, RE-OPEN):76 ~ Can't find mapping from "the the pricing issue line items page" to a path.
+Now, go and add a mapping in /Users/rdownie/rollstream/communtity_service/features/support/paths.rb
+Scenario: Create Issue with NO participants and check emails:8 ~ Sorry, I wasn't able to find the 'Logout' element 
+Scenario: A NON-CA Person can be a issue participant (VIEW, POST):111 ~ SIGTERM
+Scenario: Create Issue with NO participants and check emails:8 ~ Sorry, I wasn't able to find the 'Logout' element 
+Scenario: Check Permissions security for Pre-Approver and Approver:33 ~ Can't find mapping from "the onboarding requests page" to a path.
+Now, go and add a mapping in /Users/rdownie/rollstream/communtity_service/features/support/paths.rb
+Scenario: Check Permissions security for Pre-Approver and Approver:33 ~ SIGTERM

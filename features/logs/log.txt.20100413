@@ -1,0 +1,5 @@
+# Logfile created on Mon Feb 08 09:01:51 -0500 2010 by /
+Scenario: A NON-CA Person can be a issue manager (VIEW, POST, EDIT, RESOLVE, RE-OPEN):117 ~ Sorry, I wasn't able to find the 'Edit' element 
+Scenario: A NON-CA Person can be a issue manager (VIEW, POST, EDIT, EXPORT, RESOLVE, CLOSE):117 ~ Sorry, I wasn't able to find the 'Edit' element 
+Scenario: Create Issue with NO participants and check emails:8 ~ SIGTERM
+Scenario: A NON-CA Person can be a issue manager (VIEW, POST, EDIT, EXPORT, RESOLVE, CLOSE):117 ~ Sorry, I wasn't able to find the 'Edit' element 

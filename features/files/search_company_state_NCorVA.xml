@@ -1,0 +1,14 @@
+<Search>
+  <Group conditions_operand="any" >
+    <Condition model="Company">
+      <Attribute>address_state</Attribute>
+      <Operator>is_exactly</Operator>
+      <Values><Value>Virginia</Value></Values>
+    </Condition>
+    <Condition model="Company">
+	  <Attribute>address_state</Attribute>
+	  <Operator>is_exactly</Operator>
+	  <Values><Value>North Carolina</Value></Values>
+	</Condition>
+  </Group>
+</Search>

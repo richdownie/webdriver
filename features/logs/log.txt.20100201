@@ -1,0 +1,16 @@
+Scenario: Accessing a pricing dispute as a community administrator for a community with access to dispute management:17 ~ <nil> is not true.
+Scenario: Can get to pricing disputes/new as Spoke a Pricing Contact:24 ~ No option with text of "Pricing Contact" in this select element
+Scenario: Can get to shipping disputes/new as Spoke a Pricing Contact:34 ~ <nil> is not true.
+Scenario: A NON-CA Person can be a dispute creator (CREATE, EDIT[OWN], POST):40 ~ Sorry, I wasn't able to find the '1' element 
+Scenario: Accessing a pricing dispute as a community administrator for a community with access to dispute management:17 ~ <nil> is not true.
+Scenario: Can get to pricing disputes/new as Spoke a Pricing Contact:24 ~ <nil> is not true.
+Scenario: Can get to shipping disputes/new as Spoke a Pricing Contact:34 ~ <nil> is not true.
+Scenario: Create a new Shipping Dispute:47 ~ Sorry, I wasn't able to find the 'Shipping' element 
+Scenario: Shipping Dispute Validation:58 ~ Sorry, I wasn't able to find the 'Shipping' element 
+Scenario: Search for Shipping Line Item by CompanyID:66 ~ <nil> is not true.
+Scenario: Search for Shipping Line Item by Status:75 ~ No option with text of "Open" in this select element
+Scenario: Create a new Shipping Dispute:47 ~ No option with text of "green" in this select element
+Scenario: Create a new Shipping Dispute:47 ~ No option with text of "green" in this select element
+Scenario: Search for Shipping Line Item by Status:73 ~ No option with text of "Re-opened" in this select element
+Scenario: A NON-CA Person can be a dispute creator (CREATE, EDIT[OWN], POST):40 ~ Sorry, I wasn't able to find the '1' element 
+Scenario: A NON-CA Person can be a dispute creator (CREATE, EDIT[OWN], POST):40 ~ Sorry, I wasn't able to find the 'dispute_responder_id' element 

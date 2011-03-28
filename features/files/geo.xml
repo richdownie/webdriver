@@ -1,0 +1,11 @@
+<Search>
+  <Group conditions_operand="any" >
+    <Condition model="Contact">
+      <Attribute>location</Attribute>
+      <Operator>distance</Operator>
+      <Values><Value>39</Value></Values>
+      <Values><Value>77</Value></Values>
+      <Values><Value>23</Value></Values>
+    </Condition>
+  </Group>
+</Search>

@@ -1,0 +1,9 @@
+<Search>
+  <Group conditions_operand="any" group_operand="and">
+    <Condition model="Contact">
+      <Attribute>first_name</Attribute>
+      <Operator>contains</Operator>
+      <Values><Value>39</Value></Values>
+    </Condition>
+  </Group>
+</Search>
