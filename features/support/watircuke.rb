@@ -3,23 +3,25 @@ module WatirCukeHelpers
     if type == Fixnum then
       type.to_i
       @browser.button(:index, type).click
-    end
-    if @browser.button(:id, type).exists? then
-       @browser.button(:id, type).click
-    elsif
-       @browser.button(:name, type).exists? then
-       @browser.button(:name, type).click
-    elsif
-       @browser.button(:value, type).exists? then
-       @browser.button(:value, type).click
-    elsif
-       @browser.button(:text, type).exists? then
-       @browser.button(:text, type).click
-    elsif
-      @browser.button(:class, type).exists? then
-      @browser.button(:class, type).click
     else
-      fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+      type.to_s
+      if @browser.button(:id, type).exists? then
+         @browser.button(:id, type).click
+      elsif
+         @browser.button(:name, type).exists? then
+         @browser.button(:name, type).click
+      elsif
+         @browser.button(:value, type).exists? then
+         @browser.button(:value, type).click
+      elsif
+         @browser.button(:text, type).exists? then
+         @browser.button(:text, type).click
+      elsif
+        @browser.button(:class, type).exists? then
+        @browser.button(:class, type).click
+      else
+        fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+      end
     end
   end
   def find_checkbox(type)
