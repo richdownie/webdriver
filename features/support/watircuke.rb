@@ -132,6 +132,9 @@ module WatirCukeHelpers
   end
 
   def find_text_field(type, text)
+    if text == "Today"
+      @browser.text_field(:index, type).set("#{@today}")
+    else  
       if @browser.text_field(:id, type).exists? then
          @browser.text_field(:id, type).set(text)     
       elsif 
@@ -150,6 +153,7 @@ module WatirCukeHelpers
       else
         fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
       end
+    end
   end
   
   def find_span(type)
