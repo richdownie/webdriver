@@ -68,21 +68,21 @@ module WatirCukeHelpers
   end
 
   def find_link(type)
-    if @browser.link(:id, type).exists? then
-       @browser.link(:id, type).click
-     elsif 
-       @browser.link(:text, type).wait_until_present then
-       @browser.link(:text, type).click
-    elsif 
-       type == Fixnum then
-       type.to_i
-       @browser.link(:index, type).click
-   elsif
-      @browser.link(:class, type).exists? then
-      @browser.link(:class, type).click
-    else
-      fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
-    end
+    # if @browser.link(:id, type).exists? then
+    #    @browser.link(:id, type).click
+    #  elsif 
+    #    @browser.link(:text, type).wait_until_present then
+       @browser.link(:text, type).when_present.click
+   #  elsif 
+   #     type == Fixnum then
+   #     type.to_i
+   #     @browser.link(:index, type).click
+   # elsif
+   #    @browser.link(:class, type).exists? then
+   #    @browser.link(:class, type).click
+   #  else
+   #    fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+   #  end
   end
 
   def find_radio_button(type)
