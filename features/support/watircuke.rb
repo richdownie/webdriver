@@ -73,6 +73,7 @@ module WatirCukeHelpers
   end
 
   def find_link(type)
+    type.to_s
     if @browser.link(:text, type).exists? then
        @browser.link(:text, type).click
  elsif @browser.link(:class, /(^|\s)#{type}(\s|$)/).exists? then
