@@ -132,9 +132,6 @@ module WatirCukeHelpers
   end
 
   def find_text_field(type, text)
-    if text == "Today"
-      @browser.text_field(:index, type).set("#{@today}")
-    else  
       if @browser.text_field(:id, type).exists? then
          @browser.text_field(:id, type).set(text)     
       elsif 
