@@ -132,28 +132,28 @@ module WatirCukeHelpers
   end
 
   def find_text_field(type, text)
-    if text == "Today"
-      @browser.text_field(:index, type).set("#{@today}")
-    else  
-      if @browser.text_field(:id, type).exists? then
-         @browser.text_field(:id, type).set(text)     
-      elsif 
-        @browser.text_field(:name, type).exists? then
-        @browser.text_field(:name, type).set(text)
-      elsif 
-        @browser.text_field(:value, type).exists? then
-        @browser.text_field(:value, type).set(text)
-      elsif 
-           type == Fixnum then
-           type.to_i
-           @browser.text_field(:index, type).click   
-      elsif 
-        @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).exists? then
-        @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).set(text)    
-      else
-        fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
-      end
-    end
+    # if text == "Today"
+    #   @browser.text_field(:index, type).set("#{@today}")
+    # else  
+    #   if 
+        @browser.text_field(:id, type).when_present.set(text)    
+      # elsif 
+      #     @browser.text_field(:name, type).exists? then
+      #     @browser.text_field(:name, type).set(text)
+      #   elsif 
+      #     @browser.text_field(:value, type).exists? then
+      #     @browser.text_field(:value, type).set(text)
+      #   elsif 
+      #        type == Fixnum then
+      #        type.to_i
+      #        @browser.text_field(:index, type).click   
+      #   elsif 
+      #     @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).exists? then
+      #     @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).set(text)    
+      #   else
+      #     fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+      #   end
+    # end
   end
   
   def find_span(type)
