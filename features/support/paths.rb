@@ -26,6 +26,12 @@ module Paths
         
       when /the item custom fields page/i
         @community_url + "item_custom_fields"
+        
+      when /the add new items page/i
+        @community_url + "items/new?organization_id=1"
+        
+      when /the import items page/i
+        @community_url + "items/imports/new?parent_id=1"
       
       when /the onboarding admin page/i
         @community_url + "view_onboarding_permissions"
