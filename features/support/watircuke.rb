@@ -191,9 +191,6 @@ module WatirCukeHelpers
        @browser.div(:text, type).exists? then
        @browser.div(:text, type).click
     elsif
-      @browser.div(:index, type).exists? then
-      @browser.div(:index, type).click
-    elsif
       @browser.div(:class, type).exists? then
       @browser.div(:class, type).click
     else
