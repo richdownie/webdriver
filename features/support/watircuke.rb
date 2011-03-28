@@ -73,9 +73,10 @@ module WatirCukeHelpers
   end
 
   def find_link(type)
-    
-    if   @browser.link(:text, type).exists? then
+    if @browser.link(:text, type).exists? then
        @browser.link(:text, type).click
+ elsif @browser.link(:class, /(^|\s)#{type}(\s|$)/).exists? then
+       @browser.link(:class, /(^|\s)#{type}(\s|$)/).click
     else
       fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
     end  
