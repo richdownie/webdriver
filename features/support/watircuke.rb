@@ -150,7 +150,6 @@ module WatirCukeHelpers
       else
         fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
       end
-    end
   end
   
   def find_span(type)
