@@ -73,19 +73,11 @@ module WatirCukeHelpers
   end
 
   def find_link(type)
-    if type == Fixnum then
-      type.to_i
-      @browser.link(:index, type).click
-    else
-      type.to_s
       if @browser.link(:id, type).exists? then
          @browser.link(:id, type).click
        elsif 
          @browser.link(:text, type).exists? then
          @browser.link(:text, type).click
-       elsif
-        @browser.link(:class, type).exists? then
-        @browser.link(:class, type).click
       else
         fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
       end  
