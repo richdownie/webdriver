@@ -148,10 +148,7 @@ module WatirCukeHelpers
         @browser.text_field(:name, type).set(text)
       elsif 
         @browser.text_field(:value, type).exists? then
-        @browser.text_field(:value, type).set(text)
-      elsif 
-        @browser.text_field(:index, type).exists? then
-        @browser.text_field(:index, type).set(text)     
+        @browser.text_field(:value, type).set(text)  
       elsif 
         @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).exists? then
         @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).set(text)    
