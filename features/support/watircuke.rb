@@ -235,6 +235,7 @@ module WatirCukeHelpers
   end
   
   def find_file_field(file, type)
+    type.to_s
     sleep 2
     file_path = File.expand_path(File.dirname(__FILE__)) + File::SEPARATOR + File.join("..", "files", "imports", File::SEPARATOR)
     sleep 2
@@ -243,13 +244,25 @@ module WatirCukeHelpers
     if @browser.file_field(:id, type).exists? then
       sleep 2
       @browser.file_field(:id, type).set(file_path + file)
-    elsif @browser.file_field(:index, type).exists? then
-      sleep 2
-      @browser.file_field(:index, type).set(file_path + file)
     else
       fail("could not find what you asked for")
     end
   end
+  
+  # def find_file_field_by_index(file, type)
+  #   type.to_i
+  #   sleep 2
+  #   file_path = File.expand_path(File.dirname(__FILE__)) + File::SEPARATOR + File.join("..", "files", "imports", File::SEPARATOR)
+  #   sleep 2
+  #   file_path.gsub!(File::SEPARATOR, File::ALT_SEPARATOR) if File::ALT_SEPARATOR
+  #   sleep 2
+  #   if @browser.file_field(:index, type).exists? then
+  #      sleep 2
+  #      @browser.file_field(:index, type).set(file_path + file)
+  #   else
+  #     fail("could not find what you asked for")
+  #   end
+  # end
   
   def find_page(page_name)
     @browser.goto(path_to(page_name))

@@ -93,6 +93,10 @@ Given /I upload "(.*)" to the "(.*)" file field/ do |file, type|
   find_file_field(file, type)
 end
 
+# Given /I upload by index "(.*)" to the "(.*)" file field/ do |file, type|
+#   find_file_field_by_index(file, type)
+# end
+
 Then /^I should (NOT )?see the text "([^\"]*)"$/ do |visibility, text|
   expected = (visibility.to_s.strip == 'NOT') ? assert_false(@browser.text) : assert(@browser.text)
 end
