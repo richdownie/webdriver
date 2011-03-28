@@ -1,5 +1,9 @@
 module WatirCukeHelpers
   def find_button(type)
+    if type == Fixnum then
+      type.to_i
+      @browser.button(:index, type).click
+    end
     if @browser.button(:id, type).exists? then
        @browser.button(:id, type).click
     elsif
@@ -12,9 +16,6 @@ module WatirCukeHelpers
        @browser.button(:text, type).exists? then
        @browser.button(:text, type).click
     elsif
-      @browser.button(:index, type).exists? then
-      @browser.button(:index, type).click
-    elsif
       @browser.button(:class, type).exists? then
       @browser.button(:class, type).click
     else
@@ -22,6 +23,10 @@ module WatirCukeHelpers
     end
   end
   def find_checkbox(type)
+    if type == Fixnum then
+      type.to_i
+      @browser.checkbox(:index, type).click
+    end
     if @browser.checkbox(:id, /#{type}/).exists? then
        @browser.checkbox(:id, /#{type}/).click
     elsif
@@ -34,9 +39,6 @@ module WatirCukeHelpers
        @browser.checkbox(:text, type).exists? then
        @browser.checkbox(:text, type).click
     elsif
-      @browser.checkbox(:index, type).exists? then
-      @browser.checkbox(:index, type).click
-    elsif
       @browser.checkbox(:class, type).exists? then
       @browser.checkbox(:class, type).click
     else
@@ -45,6 +47,10 @@ module WatirCukeHelpers
   end
 
   def find_image(type)
+    if type == Fixnum then
+      type.to_i
+      @browser.image(:index, type).click
+    end
     if @browser.image(:src, /#{type}/).exists? then
        @browser.image(:src, /#{type}/).click
     elsif 
@@ -57,9 +63,6 @@ module WatirCukeHelpers
       @browser.image(:text, type).exists? then
       @browser.image(:text, type).click
     elsif 
-      @browser.image(:index, type).exists? then
-      @browser.image(:index, type).click
-    elsif 
       @browser.image(:class, type).exists? then
       @browser.image(:class, type).click
     else
@@ -68,15 +71,16 @@ module WatirCukeHelpers
   end
 
   def find_link(type)
+    if type == Fixnum then
+      type.to_i
+      @browser.link(:index, type).click
+    end
     if @browser.link(:id, type).exists? then
        @browser.link(:id, type).click
      elsif 
        @browser.link(:text, type).exists? then
        @browser.link(:text, type).click
-    elsif 
-      @browser.link(:index, type).exists? then
-      @browser.link(:index, type).click
-   elsif
+     elsif
       @browser.link(:class, type).exists? then
       @browser.link(:class, type).click
     else
@@ -85,6 +89,10 @@ module WatirCukeHelpers
   end
 
   def find_radio_button(type)
+    if type == Fixnum then
+      type.to_i
+      @browser.radio(:index, type).click
+    end
     if @browser.radio(:id, type).exists? then
        @browser.radio(:id, type).click
     elsif 
@@ -97,9 +105,6 @@ module WatirCukeHelpers
       @browser.radio(:text, type).exists? then
       @browser.radio(:text, type).click
     elsif 
-      @browser.radio(:index, type).exists? then
-      @browser.radio(:index, type).click
-    elsif 
       @browser.radio(:class, type).exists? then
       @browser.radio(:class, type).click
     else
@@ -108,6 +113,10 @@ module WatirCukeHelpers
   end
 
   def find_select_list(text, type)
+    if type == Fixnum then
+      type.to_i
+      @browser.selectd_list(:index, type).select(text)
+    end
     if @browser.select_list(:id, type).exists? then
        @browser.select_list(:id, type).select(text)
 
@@ -120,9 +129,6 @@ module WatirCukeHelpers
     elsif @browser.select_list(:text, type).exists? then
           @browser.select_list(:text, type).select(text)
 
-    elsif @browser.select_list(:index, type).exists? then
-          @browser.select_list(:index, type).select(text)
-
     elsif @browser.select_list(:class, /(^|\s)#{type}(\s|$)/).exists? then
           @browser.select_list(:class, /(^|\s)#{type}(\s|$)/).set(text)
     else
@@ -131,9 +137,10 @@ module WatirCukeHelpers
   end
 
   def find_text_field(type, text)
-    if text == "Today"
-      @browser.text_field(:index, type).set("#{@today}")
-    else  
+    if type == Fixnum then
+      type.to_i
+      @browser.text_field(:index, type).click
+    end
       if @browser.text_field(:id, type).exists? then
          @browser.text_field(:id, type).set(text)     
       elsif 
@@ -151,7 +158,6 @@ module WatirCukeHelpers
       else
         fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
       end
-    end
   end
   
   def find_span(type)
@@ -172,9 +178,6 @@ module WatirCukeHelpers
     elsif @browser.text_field(:value, type).exists? then
           @browser.text_field(:value, type).set(text + @random)
      
-    elsif @browser.text_field(:index, type).exists? then
-          @browser.text_field(:index, type).set(text + @random)
-     
     elsif @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).exists? then
           @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).set(text + @random)
     else
@@ -183,6 +186,10 @@ module WatirCukeHelpers
   end
   
   def find_div(type)
+    if type == Fixnum then
+      type.to_i
+      @browser.div(:index, type).click
+    end
     if @browser.div(:id, type).exists? then
        @browser.div(:id, type).click
     elsif
