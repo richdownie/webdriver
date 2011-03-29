@@ -8,7 +8,7 @@ Scenario Outline:  Add Each Type Of Custom Fields
   Given I login with "rdownie@qamail1.rollstream.com"
   And I reset the Items data
   And I am on the item custom fields page
-  # * I click the "Manage Custom Fields" link
+  * I click the "Manage Custom Fields" link
   And I click the <value> link
   And I fill in the text field "question_label" with <name>
   And I click the "SAVE" link
@@ -27,7 +27,7 @@ Scenario Outline:  Edit Custom Field Values
   Given I login with "rdownie@qamail1.rollstream.com"
   And I reset the Items data
   And I am on the item custom fields page
-  # * I click the "Manage Custom Fields" link
+  * I click the "Manage Custom Fields" link
   And I click the <value> link
   And I fill in the text field "question_label" with <name>
   And I click the "SAVE" link
@@ -45,7 +45,7 @@ Scenario:  Add new from companies page
   * I login with "rdownie@qamail1.rollstream.com"
   * I reset the Items data
   * I am on the item custom fields page
-  # * I click the "Manage Custom Fields" link
+  * I click the "Manage Custom Fields" link
   * I click the "Number" link
   * I wait for "2" seconds
   * I fill in the text field "question_label" with "Item Number"
@@ -68,7 +68,7 @@ Scenario:  Add new from mycompanies page
   * I login with "rdownie@qamail1.rollstream.com"
   * I reset the Items data
   * I am on the item custom fields page
-  # * I click the "Manage Custom Fields" link
+  * I click the "Manage Custom Fields" link
   * I click the "Number" link
   * I fill in the text field "question_label" with "Item Number"
   * I click the "SAVE" link
