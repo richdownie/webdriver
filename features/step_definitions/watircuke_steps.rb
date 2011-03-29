@@ -98,7 +98,7 @@ end
 # end
 
 Then /^I should (NOT )?see the text "([^\"]*)"$/ do |visibility, text|
-  expected = (visibility.to_s.strip == 'NOT') ? assert_false(@browser.text) : assert(@browser.text)
+  expected = (visibility.to_s.strip == 'NOT') ? assert_not_equal(@browser.text, text) : assert(@browser.text)
 end
 
 Then /^I should (NOT )?see the exact text "([^\"]*)"$/ do |visibility, text|
