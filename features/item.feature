@@ -94,9 +94,9 @@ Scenario: Import Items from Items List
   * I am on the import items page
   And I upload "no_company_item_import.csv" to the "import_uploaded_data" file field
   # And I wait for "6" seconds
-  And I click the "Next" link
+  And I click the "next" link
   # And I wait for "6" seconds
-  And I click the "Next" link
+  And I click the "next" link
   # And I wait for "6" seconds
   And I click the "Next" link
   # And I wait for "6" seconds

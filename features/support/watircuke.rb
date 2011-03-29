@@ -75,7 +75,7 @@ module WatirCukeHelpers
   def find_link(type)
     type.to_s    
     kind = [:text, :class]
-    kind.collect { |k| @browser.link(k, /(^|\s)#{type}(\s|$)/).click unless @browser.link(k, /(^|\s)#{type}(\s|$)/).exists? == false }
+    kind.collect { |k| @browser.link(k, type).click unless @browser.link(k, type).exists? == false }
  #    if @browser.link(:text, type).wait_until_present then
  #       @browser.link(:text, type).click
  # elsif @browser.link(:class, /(^|\s)#{type}(\s|$)/).wait_until_present then
