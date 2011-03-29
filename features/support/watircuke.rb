@@ -136,9 +136,11 @@ module WatirCukeHelpers
   def find_text_field(type, text)
     type.to_s
     kind = [:text, :class]
-    kind.each do |k|
-      @browser.text_field(k, /(^|\s)#{type}(\s|$)/).set(text) unless @browser.text_field(k, /(^|\s)#{type}(\s|$)/).exists? == false
-    end
+    kind = [:text, :class]
+    kind.collect { |k| @browser.text_field(k, /(^|\s)#{type}(\s|$)/).set(text) unless @browser.text_field(k, /(^|\s)#{type}(\s|$)/).exists? == false }
+    # kind.each do |k|
+    #   @browser.text_field(k, /(^|\s)#{type}(\s|$)/).set(text) unless @browser.text_field(k, /(^|\s)#{type}(\s|$)/).exists? == false
+    # end
     # if @browser.text_field(:text, type).exits? then
     #    @browser.text_field(:text, type).set(text)     
     # elsif 
