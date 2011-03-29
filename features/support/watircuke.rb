@@ -73,13 +73,14 @@ module WatirCukeHelpers
   end
 
   def find_link(type)
-    type.to_s
+    type.to_s    
     kind = [:text, :class]
-    Watir::Wait.until { @browser.link(kind, /(^|\s)#{type}(\s|$)/).exists? then
-      @browser.link(kind, /(^|\s)#{type}(\s|$)/).click }
- #    if @browser.link(:text, type).exists? then
+    kind.each do |k|
+      @browser.link(k, /(^|\s)#{type}(\s|$)/).click unless @browser.link(k, /(^|\s)#{type}(\s|$)/).exists? == false
+    end
+ #    if @browser.link(:text, type).wait_until_present then
  #       @browser.link(:text, type).click
- # elsif @browser.link(:class, ).exists? then
+ # elsif @browser.link(:class, /(^|\s)#{type}(\s|$)/).wait_until_present then
  #       @browser.link(:class, /(^|\s)#{type}(\s|$)/).click
  #    else
  #      fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
@@ -136,20 +137,18 @@ module WatirCukeHelpers
   
   def find_text_field(type, text)
     type.to_s
-    if @browser.text_field(:id, type).exists? then
-       @browser.text_field(:id, type).set(text)     
-    elsif 
-      @browser.text_field(:name, type).exists? then
-      @browser.text_field(:name, type).set(text)
-    elsif 
-      @browser.text_field(:value, type).exists? then
-      @browser.text_field(:value, type).set(text)  
-    elsif 
-      @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).exists? then
-      @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).set(text)    
-    else
-      fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+    kind = [:text, :class]
+    kind.each do |k|
+      @browser.text_field(k, /(^|\s)#{type}(\s|$)/).set(text) unless @browser.text_field(k, /(^|\s)#{type}(\s|$)/).exists? == false
     end
+    # if @browser.text_field(:text, type).exits? then
+    #    @browser.text_field(:text, type).set(text)     
+    # elsif 
+    #   @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).exists? then
+    #   @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).set(text)    
+    # else
+    #   fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+    # end
   end
   
   def find_text_field_by_id(type, text)
