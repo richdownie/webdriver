@@ -74,13 +74,14 @@ module WatirCukeHelpers
 
   def find_link(type)
     type.to_s
+    Watir::Wait.until {
     if @browser.link(:text, type).exists? then
        @browser.link(:text, type).click
  elsif @browser.link(:class, /(^|\s)#{type}(\s|$)/).exists? then
        @browser.link(:class, /(^|\s)#{type}(\s|$)/).click
     else
       fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
-    end  
+    end }
   end
 
   def find_radio_button(type)
