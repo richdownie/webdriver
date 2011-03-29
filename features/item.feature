@@ -93,19 +93,19 @@ Scenario: Import Items invalid csv duplicate item_id
 Scenario: Import Items from Items List
   * I am on the import items page
   And I upload "no_company_item_import.csv" to the "import_uploaded_data" file field
-  And I wait for "6" seconds
+  # And I wait for "6" seconds
   And I click the "Next" link
-  And I wait for "6" seconds
+  # And I wait for "6" seconds
   And I click the "Next" link
-  And I wait for "6" seconds
+  # And I wait for "6" seconds
   And I click the "Next" link
-  And I wait for "6" seconds
+  # And I wait for "6" seconds
   And I click the "Go to Items." link
   And I am on the companies page
-  And I wait for "6" seconds
+  # And I wait for "6" seconds
   And I fill in the text field "quick_search" with "ping"
   And I click the "Search" link
-  And I wait for "3" seconds
+  # And I wait for "3" seconds
   And I click the "PING" link
   And I click the "ITEMS" div
   Then I should see the text "TestRich"
