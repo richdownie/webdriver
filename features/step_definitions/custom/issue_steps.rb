@@ -26,8 +26,8 @@ Given /I click the "(.*)" under "(.*)"/ do |link, where|
   @browser.ul(:id, where).link(:text, link).click
 end
 
-Given /^I set checkbox "(.*)" in the search results$/ do |index|
-  @browser.div(:class, "issues-content").checkbox(:index, index).click
+Given /^I set the first checkbox in the search results$/ do
+  @browser.checkbox(:id, /bulk_update_line_item_/).click
 end
 
 Given /I verify Earmark Table Row exists/i do

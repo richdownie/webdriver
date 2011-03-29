@@ -7,17 +7,16 @@ Given I login with "rdownie@qamail1.rollstream.com"
   And I setup the issue type
   And I click the "ADD ISSUES" link
   And I select "Owens & Minor" from "issue_responder_id"
-  And I fill in the text field "1" with "Purple"
-  And I fill in the text field "2" with "Orange"
-  And I fill in the text field "4" with "Green"
+  And I fill in the text field "issue_form_response_attributes_answers_attributes_0_value" with "Purple"
+  And I fill in the text field "issue_line_items_attributes_0_form_response_attributes_answers_attributes_0_value" with "Orange"
+  And I fill in the text field "issue_line_items_attributes_1_form_response_attributes_answers_attributes_0_value" with "Green"
   And I click the "SAVE" button
   And I wait for "5" seconds
-  And I click the "ADD ISSUES" div
-  And I wait for "5" seconds
+  And I am on the new issues page
   And I select "PING" from "issue_responder_id"
-  And I fill in the text field "1" with "Black"
-  And I fill in the text field "2" with "Red"
-  And I fill in the text field "4" with "Blue"
+  And I fill in the text field "issue_form_response_attributes_answers_attributes_0_value" with "Black"
+  And I fill in the text field "issue_line_items_attributes_0_form_response_attributes_answers_attributes_0_value" with "Red"
+  And I fill in the text field "issue_line_items_attributes_1_form_response_attributes_answers_attributes_0_value" with "Blue"
   And I click the "SAVE" button
  
 @firefox @lineitems
@@ -28,7 +27,7 @@ Scenario: Searching and Bulk updating by Selected rows
   And I click the "Search" button
   And I wait for "3" seconds
   And I select "Mark Pending" from "bulkOperations"
-  And I set checkbox "2" in the search results
+  And I set the first checkbox in the search results
   And I click the "Update" link
   And I click the "Proceed With Update" button
   And I click the "Click here" link
