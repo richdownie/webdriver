@@ -44,7 +44,7 @@ Scenario: Searching and Bulk updating by Selected rows after clicking "Check All
   And I click the "Search" button
   And I wait for "3" seconds
   And I select "Mark Pending" from "bulkOperations"
-  And I set checkbox "1" in the search results
+  And I set the first checkbox in the search results
   And I click the "Update" link
   And I click the "Proceed With Update" button
   And I click the "Click here" link
@@ -59,13 +59,13 @@ Scenario: Verify unauthorized message in Bulk Update
   And I am on the issues page
   And I click the "MANAGE LINE ITEMS" div
   And I select "Mark Pending" from "bulkOperations"
-  And I set checkbox "1" in the search results
+  And I set the first checkbox in the search results
   And I click the "Update" link
   And I click the "Proceed With Update" button
   And I am on the issues page
   And I click the "MANAGE LINE ITEMS" div
   And I select "Mark Pending" from "bulkOperations"
-  And I set checkbox "2" in the search results
+  And I set the first checkbox in the search results
   And I click the "Update" link
   And I click the "Proceed With Update" button
   And I wait for "3" seconds
