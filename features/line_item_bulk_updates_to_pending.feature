@@ -9,21 +9,21 @@ Given I login with "rdownie@qamail1.rollstream.com"
   And I setup the issue type
   And I click the "ADD ISSUES" link
   And I select "Owens & Minor" from "issue_responder_id"
-  And I fill in the text field "1" with "Purple"
-  And I fill in the text field "2" with "Orange"
-  And I fill in the text field "4" with "Green"
+  And I fill in the text field "issue_form_response_attributes_answers_attributes_0_value" with "Purple"
+  And I fill in the text field "issue_line_items_attributes_0_form_response_attributes_answers_attributes_0_value" with "Orange"
+  And I fill in the text field "issue_line_items_attributes_1_form_response_attributes_answers_attributes_0_value" with "Green"
   And I click the "SAVE" button
   And I wait for "4" seconds
   And I click the "ADD ISSUES" div
   And I select "PING" from "issue_responder_id"
-  And I fill in the text field "1" with "Black"
-  And I fill in the text field "2" with "Red"
-  And I fill in the text field "4" with "Blue"
+  And I fill in the text field "issue_form_response_attributes_answers_attributes_0_value" with "Black"
+  And I fill in the text field "issue_line_items_attributes_0_form_response_attributes_answers_attributes_0_value" with "Red"
+  And I fill in the text field "issue_line_items_attributes_1_form_response_attributes_answers_attributes_0_value" with "Blue"
   And I click the "SAVE" button
 
 Scenario: Update to Pending "All Search" results as Community Administrator
   And I select "Mark Pending" from "bulkOperations"
-  And I click the "2" radio button
+  And I set the first checkbox in the search results
   And I click the "Update" link
   And I click the "Proceed With Update" button
   And I click the "Click here" link
@@ -38,7 +38,7 @@ Scenario: Update to Pending "All Search" results as Organization (Hub) Manager
   Given I am on the issues page
   And I click the "MANAGE LINE ITEMS" div
   And I select "Mark Pending" from "bulkOperations"
-  And I click the "2" radio button
+  And I set the first checkbox in the search results
   And I click the "Update" link
   And I click the "Proceed With Update" button
   Then I should see the text "You are not authorized to change the status of this line item from Open to Pending"
@@ -50,7 +50,7 @@ Scenario: Update to Pending "All Search" results as Company (Spoke) Manager
   Given I am on the issues page
   And I click the "MANAGE LINE ITEMS" div
   And I select "Mark Pending" from "bulkOperations"
-  And I click the "2" radio button
+  And I set the first checkbox in the search results
   And I click the "Update" link
   And I click the "Proceed With Update" button
   And I click the "Click here" link
@@ -65,7 +65,7 @@ Scenario: Update to Pending "All Search" results as Organization (Hub) Mediator
   Given I am on the issues page
   And I click the "MANAGE LINE ITEMS" div
   And I select "Mark Pending" from "bulkOperations"
-  And I click the "2" radio button
+  And I set the first checkbox in the search results
   And I click the "Update" link
   And I click the "Proceed With Update" button
   Then I should see the text "You are not authorized to change the status of this line item from Open to Pending"
@@ -77,7 +77,7 @@ Scenario: Update to Pending "All Search" results as Company (Spoke) Mediator
   Given I am on the issues page
   And I click the "MANAGE LINE ITEMS" div
   And I select "Mark Pending" from "bulkOperations"
-  And I click the "2" radio button
+  And I set the first checkbox in the search results
   And I click the "Update" link
   And I click the "Proceed With Update" button
   And I click the "Click here" link
@@ -92,7 +92,7 @@ Scenario: Update to Pending "All Search" results as Organization (Hub) Participa
   Given I am on the issues page
   And I click the "MANAGE LINE ITEMS" div
   And I select "Mark Pending" from "bulkOperations"
-  And I click the "2" radio button
+  And I set the first checkbox in the search results
   And I click the "Update" link
   And I click the "Proceed With Update" button
   Then I should see the text "You are not authorized to change the status of this line item from Open to Pending"
@@ -109,7 +109,7 @@ Scenario: Update to Pending "All Search" results as Company (Spoke) Participant
   Given I am on the issues page
   And I click the "MANAGE LINE ITEMS" div
   And I select "Mark Pending" from "bulkOperations"
-  And I click the "2" radio button
+  And I set the first checkbox in the search results
   And I click the "Update" link
   And I click the "Proceed With Update" button
   And I click the "Click here" link
@@ -122,13 +122,6 @@ Scenario: Update to Pending "All Search" results as Organization (Hub) Creator
   And I click the "Logout" link
   Given I login with "rdownie+hcreator@qamail1.rollstream.com"
   Given I am on the issues page
-  And I click the "MANAGE LINE ITEMS" div
-  And I select "Mark Pending" from "bulkOperations"
-  And I click the "2" radio button
-  And I click the "Update" link
-  And I click the "Proceed With Update" button
-  And I click the "Click here" link
-  And I click the "MANAGE ISSUES" div
   Then I should NOT see the text "Pending(2)"
   Then I should see the text "No results found"
   And I click the "Logout" link
@@ -137,14 +130,6 @@ Scenario: Update to Pending "All Search" results as Company (Spoke) Creator
   And I click the "Logout" link
   Given I login with "rdownie+jcreator@qamail1.rollstream.com"
   Given I am on the issues page
-  And I click the "MANAGE LINE ITEMS" div
-  And I select "Mark Pending" from "bulkOperations"
-  And I click the "2" radio button
-  And I click the "Update" link
-  And I click the "Proceed With Update" button
-  And I click the "Click here" link
-  And I click the "MANAGE ISSUES" div
-  Then I should NOT see the text "Pending(2)"
   Then I should see the text "No results found"
   And I click the "Logout" link
   
