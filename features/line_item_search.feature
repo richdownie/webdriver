@@ -8,13 +8,13 @@ Background:
   * I setup the issue type
   And I click the "ADD ISSUES" link
   And I select "Owens & Minor" from "issue_responder_id"
-  And I fill in the text field "1" with "Black"
-  And I fill in the text field "2" with "Red"
+  And I fill in the text field "issue_form_response_attributes_answers_attributes_0_value" with "Red"
+  And I fill in the text field "issue_line_items_attributes_0_form_response_attributes_answers_attributes_0_value" with "Black"
   And I click the "SAVE" button
   And I click the "ADD ISSUES" div
   And I select "PING" from "issue_responder_id"
-  And I fill in the text field "1" with "Yellow"
-  And I fill in the text field "2" with "Purple"
+  And I fill in the text field "issue_form_response_attributes_answers_attributes_0_value" with "Red"
+  And I fill in the text field "issue_line_items_attributes_0_form_response_attributes_answers_attributes_0_value" with "Black"
   And I click the "SAVE" button
   
 Scenario: Search by company id  
