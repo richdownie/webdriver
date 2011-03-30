@@ -11,7 +11,7 @@ Feature: Mass File Upload
     And I fire the company manage menu
     And I click the "Upload Files" link
     And I should see the text "Upload Files to Company Profiles"
-    And I upload "All_Valid_Files.zip" to the "1" file field
+    And I upload "All_Valid_Files.zip" to the "mass_file_upload_uploaded_data" file field
     And I select "File Upload" from "mass_file_upload_question_id"
     And I fill in the text field "mass_file_upload_file_suffix" with "Test"
     And I submit the form "new_mass_file_upload"
@@ -28,7 +28,7 @@ Feature: Mass File Upload
 	When I am on the companies page
     And I fire the company manage menu
     And I click the "Upload Files" link
-	And I upload <filename> to the "1" file field
+	And I upload <filename> to the "mass_file_upload_uploaded_data" file field
     And I select "File Upload" from "mass_file_upload_question_id"
     And I fill in the text field "mass_file_upload_file_suffix" with <suffix>
     And I submit the form "new_mass_file_upload"
