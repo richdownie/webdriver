@@ -10,14 +10,14 @@ Scenario: Permissions for a Project Administrator display Dependent Children fie
   And I am on the companies custom fields edit page
   And I click the "Add Custom field" link
   And I add a droplist
-  And I click the "Add Custom field" link
-  And I add a "True/False" field dependent on droplist
-	And I am on the companies view custom field group permissions page
-	And I wait for "2" seconds
-	And I verify all checkboxes are checked
-  Then I should see the text "(Modified)"
-  And I click the "new_ui_blue_button_inner" div
-  And I click the "Logout" link
+  #   And I click the "Add Custom field" link
+  #   And I add a "True/False" field dependent on droplist
+  # And I am on the companies view custom field group permissions page
+  # And I wait for "2" seconds
+  # And I verify all checkboxes are checked
+  #   Then I should see the text "(Modified)"
+  #   And I click the "new_ui_blue_button_inner" div
+  #   And I click the "Logout" link
   
   #test cfg as project administrator
   And I login with "rdownie+pa@qamail1.rollstream.com"
