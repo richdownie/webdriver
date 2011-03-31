@@ -1,6 +1,7 @@
 require 'logger'
 require 'cucumber'
 require 'broach'
+require 'ruby-debug'
 # Comment out the next line if you don't want Cucumber Unicode support
 require 'cucumber/formatter/unicode'
 require 'test/unit/assertions'
