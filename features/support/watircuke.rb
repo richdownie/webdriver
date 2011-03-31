@@ -75,7 +75,7 @@ module WatirCukeHelpers
   def find_link(type)
     type.to_s    
     kind = [:text, :class]
-    kind.collect { |k| @browser.link(k, type).click unless @browser.link(k, type).exists? == false }
+    kind.collect { |k| @browser.link(k, type).click unless @browser.link(k, /(^|\s)#{type}(\s|$)/).exists? == false }
  #    if @browser.link(:text, type).wait_until_present then
  #       @browser.link(:text, type).click
  # elsif @browser.link(:class, /(^|\s)#{type}(\s|$)/).wait_until_present then
@@ -184,18 +184,11 @@ module WatirCukeHelpers
   end
   
   def find_div(type)
-    if type == Fixnum then
-      type.to_i
-      @browser.div(:index, type).click
-    end
     if @browser.div(:id, type).exists? then
        @browser.div(:id, type).click
     elsif
        @browser.div(:text, type).exists? then
        @browser.div(:text, type).click
-    elsif
-      @browser.div(:index, type).exists? then
-      @browser.div(:index, type).click
     elsif
       @browser.div(:class, type).exists? then
       @browser.div(:class, type).click
@@ -208,9 +201,6 @@ module WatirCukeHelpers
     row = row.to_i
     if @browser.table(:id, type).exists? then
        @browser.table(:id, type)[row][2].click
-    elsif
-       @browser.table(:index, type).exists? then
-       @browser.table(:index, type)[row][1].click
     elsif
       @browser.table(:class, /(^|\s)#{type}(\s|$)/).exists? then
       @browser.table(:class, /(^|\s)#{type}(\s|$)/)[row][1].click
