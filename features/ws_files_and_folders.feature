@@ -21,9 +21,9 @@ Scenario: Add/Delete a File
   And I click the "Add File" link
   And I upload "issue_import.csv" to the "files_uploaded_0_uploaded_data" file field
   And I click the "Upload File" button
-  And I wait for "2" seconds
+  And I wait for "3" seconds
   And I click the "Delete" link
-  And I wait for "2" seconds
+  And I wait for "3" seconds
   And I click the "workspace_button red" button
   
 Scenario: Add File to Folder  

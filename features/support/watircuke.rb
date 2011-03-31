@@ -1,10 +1,10 @@
 module WatirCukeHelpers
   def find_button(type)
     if type == Fixnum then
-      type.to_i
+      type = type.to_i
       @browser.button(:index, type).click
     else
-      type.to_s
+      type = type.to_s
       if @browser.button(:id, type).exists? then
          @browser.button(:id, type).click
       elsif
@@ -26,7 +26,7 @@ module WatirCukeHelpers
   end
   def find_checkbox(type)
     if type == Fixnum then
-      type.to_i
+      type = type.to_i
       @browser.checkbox(:index, type).click
     end
     if @browser.checkbox(:id, /#{type}/).exists? then
@@ -50,7 +50,7 @@ module WatirCukeHelpers
 
   def find_image(type)
     if type == Fixnum then
-      type.to_i
+      type = type.to_i
       @browser.image(:index, type).click
     end
     if @browser.image(:src, /#{type}/).exists? then
@@ -87,7 +87,7 @@ module WatirCukeHelpers
 
   def find_radio_button(type)
     if type == Fixnum then
-      type.to_i
+      type = type.to_i
       @browser.radio(:index, type).click
     end
     if @browser.radio(:id, type).exists? then
@@ -111,7 +111,7 @@ module WatirCukeHelpers
 
   def find_select_list(text, type)
     if type == Fixnum then
-      type.to_i
+      type = type.to_i
       @browser.selectd_list(:index, type).select(text)
     end
     if @browser.select_list(:id, type).exists? then
@@ -134,10 +134,14 @@ module WatirCukeHelpers
   end
   
   def find_text_field(type, text)
-      type.to_s
+    if type == Fixnum then
+      type = type.to_i
+      @browser.text_field(:index, type).set(text)
+    else
+      type = type.to_s
       kind = [:id, :text, :class]
       kind.collect { |k| @browser.text_field(k, /(^|\s)#{type}(\s|$)/).set(text) unless @browser.text_field(k, /(^|\s)#{type}(\s|$)/).exists? == false }
-   
+    end
     # kind.each do |k|
     #   @browser.text_field(k, /(^|\s)#{type}(\s|$)/).set(text) unless @browser.text_field(k, /(^|\s)#{type}(\s|$)/).exists? == false
     # end
@@ -151,12 +155,7 @@ module WatirCukeHelpers
     # end
   end
   
-  def find_text_field_by_id(type, text)
-    type.to_i
-    if @browser.text_field(:index, type).exists? then
-      @browser.text_field(:index, type).click
-    end
-  end
+
   
   def find_span(type)
     if @browser.span(:class, type).exists? then
@@ -245,21 +244,7 @@ module WatirCukeHelpers
       fail("could not find what you asked for")
     end
   end
-  
-  # def find_file_field_by_index(file, type)
-  #   type.to_i
-  #   sleep 2
-  #   file_path = File.expand_path(File.dirname(__FILE__)) + File::SEPARATOR + File.join("..", "files", "imports", File::SEPARATOR)
-  #   sleep 2
-  #   file_path.gsub!(File::SEPARATOR, File::ALT_SEPARATOR) if File::ALT_SEPARATOR
-  #   sleep 2
-  #   if @browser.file_field(:index, type).exists? then
-  #      sleep 2
-  #      @browser.file_field(:index, type).set(file_path + file)
-  #   else
-  #     fail("could not find what you asked for")
-  #   end
-  # end
+
   
   def find_page(page_name)
     @browser.goto(path_to(page_name))

@@ -11,6 +11,7 @@ Scenario: Quick Add an Event to a Workspace
   And I fill in the text field "calendar_event_title" with "Quick Add New Event"
   And I fill in the text field "calendar_event_description" with "Quick Add New Event"
   And I click the "Add Event" button
+  And I wait for "3" seconds
   And I click the "View All Events" link
   And I click the "Logout" link    
 
@@ -26,6 +27,5 @@ Scenario: Standard Add an Event to a Workspace
   And I click the "calendar_event_require_email_reminder" checkbox
   And I select "3" from "calendar_event_remind_days_before"
   And I select "3" from "calendar_event_remind_days_before"
-  And I click the "selectAll" checkbox
   And I click the "Add Event" button
   And I click the "Logout" link

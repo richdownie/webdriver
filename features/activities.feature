@@ -8,7 +8,7 @@ Background:
 Scenario: Company Complete activity
   * I add a "Send a Message" activity to an existing project
   * I click the "1 Activity" link
-	* I click row "1" in the "list" table
+	* I click row "0" in the "list" table
 	* I click the "Edit" div
 	* I click the "activity_is_company_completion" checkbox
 	* I click the "SAVE" div
@@ -18,7 +18,7 @@ Scenario: Company Complete activity
 Scenario: Login Required activity
   * I add a "Send a Message" activity to an existing project
   * I click the "1 Activity" link
-	* I click row "1" in the "list" table
+	* I click row "0" in the "list" table
 	* I click the "Edit" div
 	* I click the "activity_login_required" checkbox
 	* I click the "SAVE" div
@@ -28,7 +28,7 @@ Scenario: Login Required activity
 Scenario: Save with no Name to the activity
   Given I add a "Send a Message" activity to an existing project
   And I click the "1 Activity" link
-	And I click row "1" in the "list" table
+	And I click row "0" in the "list" table
 	And I click the "Edit" div
 	And I fill in the text field "activity_name" with " "
 	And I click the "SAVE" div
@@ -38,7 +38,7 @@ Scenario: Save with no Name to the activity
 Scenario: Change the name of an activity
   Given I add a "Send a Message" activity to an existing project
   And I click the "1 Activity" link
-	And I click row "1" in the "list" table
+	And I click row "0" in the "list" table
 	And I click the "Edit" div
 	And I fill in the text field "activity_name" with "Public Enemy #1"
 	And I click the "SAVE" div
@@ -49,7 +49,7 @@ Scenario: Change the name of a "STARTED" activity
   Given I add a "Send a Message" activity to an existing project
 	And I start the activity
   And I click the "1 Activity" link
-	And I click row "1" in the "list" table
+	And I click row "0" in the "list" table
 	And I click the "Edit" div
 	And I fill in the text field "activity_name" with "Public Enemy #1"
 	And I click the "SAVE" div
@@ -59,7 +59,7 @@ Scenario: Change the name of a "STARTED" activity
 Scenario: Canceling out of Activity Edit
   Given I add a "Send a Message" activity to an existing project
   And I click the "1 Activity" link
-	And I click row "1" in the "list" table
+	And I click row "0" in the "list" table
 	And I click the "Edit" div
 	And I fill in the text field "activity_name" with "Public Enemy #1"
   And I click the "Cancel" div
@@ -95,7 +95,7 @@ Scenario: Canceling out of activity creation at different points
 Scenario: Copy an activity with the original Name
   Given I add a "Send a Message" activity to an existing project
   And I click the "1 Activity" link
-	And I click row "1" in the "list" table
+	And I click row "0" in the "list" table
 	And I click the "Copy" div
 	And I fill in the text field "activity_name" with "Send a Message"
 	And I click the "COPY" div
@@ -106,7 +106,7 @@ Scenario: Copy an "STARTED" activity with the original Name
   Given I add a "Send a Message" activity to an existing project
 	And I start the activity
   And I click the "1 Activity" link
-	And I click row "1" in the "list" table
+	And I click row "0" in the "list" table
 	And I click the "Copy" div
 	And I fill in the text field "activity_name" with "Send a Message"
 	And I click the "COPY" div
@@ -116,7 +116,7 @@ Scenario: Copy an "STARTED" activity with the original Name
 Scenario: Copy an activity with no Name
   Given I add a "Send a Message" activity to an existing project
   And I click the "1 Activity" link
-	And I click row "1" in the "list" table
+	And I click row "0" in the "list" table
 	And I click the "Copy" div
 	And I fill in the text field "activity_name" with " "
 	And I click the "COPY" div
@@ -127,7 +127,7 @@ Scenario: Cancel out of the copy operation
   Given I add a "Send a Message" activity to an existing project
 	And I start the activity
   And I click the "1 Activity" link
-	And I click row "1" in the "list" table
+	And I click row "0" in the "list" table
 	And I click the "Copy" div
 	And I fill in the text field "activity_name" with "Nil"
 	And I click the "Cancel" div
@@ -138,7 +138,7 @@ Scenario: Remind pending participants of an activity "No Response"
   Given I add a "Send a Message" activity to an existing project
 	And I start the activity
   And I click the "1 Activity" link
-	And I click row "1" in the "list" table
+	And I click row "0" in the "list" table
 	And I click the "No Response" link
 	And I click the "new_ui_system_button_inner" div
 	And I click the "SAVE" div
@@ -152,7 +152,7 @@ Scenario: Remind pending participants of an activity "In Progress"
 	Given I add a "Send a Message" activity to an existing project
 	And I start the activity
   And I click the "1 Activity" link
-	And I click row "1" in the "list" table
+	And I click row "0" in the "list" table
 	And I click the "PARTICIPANTS" div
 	And I click the "new_ui_system_button_inner" div
 	And I click the "SAVE" div

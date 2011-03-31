@@ -27,7 +27,7 @@ Scenario: Verify Project Email validations
 Scenario: Add a new Project and Update the Project
   Given I login with "rdownie@qamail1.rollstream.com"
   And I reset projects and activities
-	And I click row "1" in the "list" table
+	And I click row "0" in the "list" table
   And I click the "EDIT" div 
   And I fill in the text field "project_name" with random "UpdatedProjectName"
   And I click the "SAVE CHANGES" div
@@ -37,7 +37,7 @@ Scenario: Add a new Project and Update the Project
 Scenario: Copy a Project	
   Given I login with "rdownie@qamail1.rollstream.com"
   And I reset projects and activities
-	And I click row "1" in the "list" table
+	And I click row "0" in the "list" table
 	And I click the "COPY" div
 	And I fill in the text field "project_name" with random "UpdatedCopyProjectName"
 	And I click the "COPY" div
@@ -48,7 +48,7 @@ Scenario: Copy a Project
 Scenario: Edit a Project	
   Given I login with "rdownie@qamail1.rollstream.com"
   And I reset projects and activities
-	And I click row "1" in the "list" table
+	And I click row "0" in the "list" table
 	And I wait for "3" seconds
 	And I click the "EDIT" div
 	And I fill in the text field "project_name" with random "Updated Project Name"
@@ -61,40 +61,38 @@ Scenario: Edit a Project
 Scenario: Add an Activity to a New Project
   Given I login with "rdownie@qamail1.rollstream.com"
   And I reset projects and activities
-	And I click row "1" in the "list" table
+	And I click row "0" in the "list" table
   And I click the "ACTIVITIES" div
   And I click the "new_ui_blue_button_inner" div
   And I click the "Choose this" div
   And I fill in the text field "activity_name" with random "Activity"
   And I fill in the text field "activity_description" with "ActivityDescription"
   And I click the "1" checkbox
-  And I click the "2" checkbox
-  And I click the "continue_button" div
-  And I click the "continue_button" div
-  And I click the "SAVE" div
-  And I click the "Logout" link
-	And I wait for "3" seconds
+    And I click the "continue_button" div
+    And I click the "continue_button" div
+    And I click the "SAVE" div
+    And I click the "Logout" link
+  And I wait for "3" seconds
 
 Scenario: Add a Web Form to a New Project
   Given I login with "rdownie@qamail1.rollstream.com"
   And I reset projects and activities
-	And I click row "1" in the "list" table
+	And I click row "0" in the "list" table
   And I click the "WEB FORMS" div
   And I am on the new page
   And I fill in the text field "form_name" with random "WebForm"
   And I fill in the text field "form_description" with "WebFormDescription"
-  And I click the "3" radio button
-  And I click the "2" radio button
-  And I click the "1" radio button
+  And I click the "form_type_anonymous" radio button
+  And I click the "form_type_public" radio button
   And I click the "SAVE CHANGES" div
   And I click the "new_ui_blue_button_inner" div
   And I click the "Logout" link
-	And I wait for "3" seconds
+  And I wait for "3" seconds
 
 Scenario: Copy Team Members
   Given I login with "rdownie@qamail1.rollstream.com"
   And I reset projects and activities
-  And I click row "1" in the "list" table
+  And I click row "0" in the "list" table
 	And I click the "TEAM" div
 	And I click the "new_ui_blue_button_inner" div
 	And I click the "Add" div
@@ -123,8 +121,8 @@ Scenario: Create Activity Managed Project
 	And I click the "Choose this" div
 	And I fill in the text field "activity_name" with random "Activity"
 	And I fill in the text field "activity_description" with "ActivityDescription"
-	And I click the "1" checkbox
-	And I click the "2" checkbox
+  # And I click the "0" checkbox
+  # And I click the "1" checkbox
 	And I click the "continue_button" div
   # Be sure to add both Team Members and Participants
 	And I add a Participant to the Activity
@@ -136,7 +134,7 @@ Scenario: Create Activity Managed Project
 	And I click the "SAVE CHANGES" div
   #Start the Project Activity
 	And I click the "Your Projects" link
-	And I click row "1" in the "list" table
+	And I click row "0" in the "list" table
 	And I click the "START PROJECT" div
 	Then I should see the text "has been started"
   And I click the "Logout" link
