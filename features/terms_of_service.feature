@@ -23,12 +23,12 @@ Scenario: Verify Terms of Service appears once for brokers
   Given I login with "rdownie+jbroker@qamail1.rollstream.com"
   And I am on the home page
   And I wait for "4" seconds
-  And I click broker link with index of "1"
+  And I click broker link with index of "0"
   And I click the "ACCEPT" button
   Then I should see the text "DASHBOARD"
   And I click the "Logout" link
   Given I login with "rdownie+jbroker@qamail1.rollstream.com"
-  And I click broker link with index of "2"
+  And I click broker link with index of "1"
   Then I should see the text "DASHBOARD"
   And I click the "Logout" link
 

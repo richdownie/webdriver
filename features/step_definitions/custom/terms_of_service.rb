@@ -11,5 +11,6 @@ Given /I delete the terms of use/ do
 end
 
 Given /I click broker link with index of "(.*)"/ do |number|
+  number = number.to_i
   @browser.div(:class, 'new_ui_content').link(:index, number).click
 end
