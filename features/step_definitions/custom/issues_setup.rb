@@ -20,10 +20,10 @@ end
 Given /I add an issue with company "(.*)" with color "(.*)"/ do |company, color|
   steps %Q{
     Given I am on the new issues page
-    And I select "#{company}" from "1"
-    And I fill in the text field "1" with "#{color}"
-    And I fill in the text field "2" with "Black"
-    And I fill in the text field "3" with "01/01/2020"
+    And I select "#{company}" from "issue_responder_id"
+    And I fill in the text field "issue_form_response_attributes_answers_attributes_0_value" with "#{color}"
+    And I fill in the text field "issue_line_items_attributes_0_form_response_attributes_answers_attributes_0_value" with "Black"
+    And I fill in the text field "issue_line_items_attributes_0_due_date" with "01/01/2020"
     And I click the "SAVE" button
   }
 end

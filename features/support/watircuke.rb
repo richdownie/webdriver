@@ -251,7 +251,7 @@ module WatirCukeHelpers
     elsif
       @browser.table(:class, /(^|\s)#{type}(\s|$)/).exists? then
       cell = @browser.table(:class, /(^|\s)#{type}(\s|$)/)[row][cell]
-      cell.link(:index, 1).click
+      cell.link(:text, "1").click
     else
       fail("could not find what you asked for")
     end
