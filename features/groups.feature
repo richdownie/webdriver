@@ -30,7 +30,7 @@ Feature: Groups
     Given I login with <login_id>
     And I am on the companies page
     And I click the <link_name> link
-    And I fire the group manage menu
+    And I click the "Manage Group" link
     When I click the "Edit Group" link
     And I fill in the text field "organization_group_name" with <name>
     And I fill in the text field "organization_group_description" with <description>

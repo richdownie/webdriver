@@ -141,10 +141,10 @@ module WatirCukeHelpers
   def find_select_list(text, type)
     if type == Fixnum then
       type = type.to_i
-      @browser.selectd_list(:index, type).select(text)
+      @browser.select_list(:index, type).select(text)
     else
       type = type.to_s
-      kind = [:text, :class]
+      kind = [:id, :text, :class]
       kind.collect { |k| @browser.select_list(k, type).select(text) unless @browser.select_list(k, /(^|\s)#{type}(\s|$)/).exists? == false }
    end
       #  
