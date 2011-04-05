@@ -59,6 +59,10 @@ Given /I fill in the text field "(.*)" with "(.*)"/ do |type, text|
   find_text_field(type, text)
 end
 
+# Given /I fill in the text field by index "(.*)" with "(.*)"/ do |type, text|
+#   find_text_field_by_index(type, text)
+# end
+
 Given /I fill in the text field "(.*)" with random "(.*)"/ do |type, text|
   find_text_field_with_random(type, text)
 end

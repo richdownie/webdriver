@@ -10,7 +10,7 @@ Given I login with "rdownie@qamail1.rollstream.com"
 Scenario: Toggle ISSUE CFG's
   And I click the "MANAGE ISSUES" link
   Then I should see the text "Form Question?"
-  And I click the "ADMIN" div
+  And I am on the issue types Admin page
   And I click the "Shipping Dispute" link
   And I click the "Issue Custom Fields" link
   And I click the "Edit" link

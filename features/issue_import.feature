@@ -81,8 +81,7 @@ Scenario: Import an Issue XLS
   
 Scenario: csv with Issue Custom Dependent Fields as hcreator verify responding mediator sees on todo and hmanager cannot resolve with nil required
 #CA Setup of IssueType for import csv  
-  And I am on the Issues page
-  And I click the "ADMIN" div
+  And I am on the issue types Admin page
   And I click the "Shipping Dispute" link
   And I click the "Issue Custom Fields" link
   And I click the "Drop List" link
