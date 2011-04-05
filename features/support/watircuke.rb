@@ -92,8 +92,8 @@ module WatirCukeHelpers
     # end
     if @browser.link(:text, type).exists? then
        @browser.link(:text, type).click
- elsif @browser.link(:class, /(^|\s)#{type}(\s|$)/).exists? then
-       @browser.link(:class, /(^|\s)#{type}(\s|$)/).click
+ elsif @browser.link(:class, /type/).exists? then
+       @browser.link(:class, /type/).click
     else
       fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
     end
@@ -175,11 +175,14 @@ module WatirCukeHelpers
     #   kind.collect { |k| @browser.text_field(k, /(^|\s)#{type}(\s|$)/).set(text) unless @browser.text_field(k, /(^|\s)#{type}(\s|$)/).exists? == false }
     # end
 
-    if @browser.text_field(:text, type).exits? then
+    if @browser.text_field(:text, type).exists? then
        @browser.text_field(:text, type).set(text)     
-    elsif 
-      @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).exists? then
-      @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).set(text)    
+     elsif 
+       @browser.text_field(:id, /(^|\s)#{type}(\s|$)/).exists? then
+       @browser.text_field(:id, /(^|\s)#{type}(\s|$)/).set(text)
+     elsif 
+       @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).exists? then
+       @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).set(text)  
     else
       fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
     end

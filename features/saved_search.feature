@@ -7,17 +7,21 @@ Background: Create Shipping Issue Type
   
 Scenario Outline: Show Search
   And I am on <page>
+  And I wait for "3" seconds
   And I click the "Advanced" link
   And I wait for "3" seconds
-  And I enter <query> in the advanced search textfield
-  And I click the "Search" div
-  And I click the "Save" div
-  And I fill in the text field "search_name" with <query>
-  And I click the "Save" button
+  And I fill in the text field "js-organizations_name" with <query>
+  And I click the "SEARCH" link
+  And I wait for "3" seconds
+  And I click the "Save" link
+  And I wait for "3" seconds
+  And I fill in the text field "advanced_search_name" with <query>
+  And I click the "SAVE" link
   And I wait for "4" seconds
   And I am on <page>
   And I wait for "3" seconds
-  And I click the "manage search" link
+  And I click the "Saved Searches" link
+  And I click the "Manage Saved Searches" link
   And I click the "Show Search" link
   Then I should see the text "attributes match the following"
   And I click the "Logout" link
@@ -25,8 +29,6 @@ Scenario Outline: Show Search
   Examples:
      | page                 | query         |
      | "the companies page" | "Ping"        |
-     | "the contacts page"  | "Jack Abbott" |
-  
 
 Scenario Outline: Verify Results
   And I am on <page>
