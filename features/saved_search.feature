@@ -1,7 +1,7 @@
 @set4 @wip
 Feature: Company and Contact saved search scenarios
 
-Background: Create Shipping Issue Type
+Background: Cleanup existing searches
   Given I login with "rdownie@qamail1.rollstream.com"
   And I remove existing search queries
   
