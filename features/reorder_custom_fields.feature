@@ -8,16 +8,27 @@ Background:
   
 Scenario: Items
   * I am on the item custom fields page
+  * I wait for "10" seconds
   * I click the "Manage Custom Fields" link
+  * I wait for "10" seconds
   * I click the "Text" link
+  * I wait for "10" seconds
   * I fill in the text field "question_label" with "Text CF"
+  * I wait for "10" seconds
   * I click the "SAVE" link
+  * I wait for "10" seconds
   * I click the "Manage Custom Fields" link
+  * I wait for "10" seconds
   * I click the "Number" link
+  * I wait for "10" seconds
   * I fill in the text field "question_label" with "Number CF"
+  * I wait for "10" seconds
   * I click the "SAVE" link
+  * I wait for "10" seconds
   * I click row "0" in the "results clear" table
+  * I wait for "10" seconds
   * I select "2" from "posn_1"
+  * I wait for "10" seconds
   * I click the "Move this custom field" button
   
 Scenario: Issues
