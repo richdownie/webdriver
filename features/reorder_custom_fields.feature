@@ -8,30 +8,39 @@ Background:
   
 Scenario: Items
   * I am on the item custom fields page
+  * I click the "Manage Custom Fields" link
   * I click the "Text" link
   * I fill in the text field "question_label" with "Text CF"
   * I click the "SAVE" link
+  * I click the "Manage Custom Fields" link
   * I click the "Number" link
   * I fill in the text field "question_label" with "Number CF"
   * I click the "SAVE" link
-  * I select "2" from "question[position]"
+  * I click row "0" in the "results clear" table
+  * I select "2" from "posn_1"
   * I click the "Move this custom field" button
   
 Scenario: Issues
   * I setup the issue type
   * I click the "Shipping Dispute" link
   * I click the "Issue Custom Fields" link
+  * I click the "Manage Custom Fields" link
   * I click the "Number" link
   * I fill in the text field "question_label" with "Number CF"
   * I click the "SAVE" link
-  * I select "2" from "question[position]"
+  * I click row "0" in the "results clear" table
+  * I select "2" from "posn_1"
   * I click the "Move this custom field" button
 
 Scenario: LineItems  
   * I setup the issue type
+  * I click the "Shipping Dispute" link
+  * I click the "Line Item Custom Fields" link
+  * I click the "Manage Custom Fields" link
   * I click the "Number" link
   * I fill in the text field "question_label" with "Number CF"
   * I click the "SAVE" link
-  * I select "2" from "question[position]"
+  * I click row "0" in the "results clear" table
+  * I select "2" from "posn_1"
   * I click the "Move this custom field" button
   
