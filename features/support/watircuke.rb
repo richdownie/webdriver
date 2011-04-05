@@ -1,192 +1,188 @@
 module WatirCukeHelpers
   def find_button(type)
-    if type == Fixnum then
-      type = type.to_i
-      kind = [:id]
-      kind.collect { |k| @browser.button(k, type).click unless @browser.button(k, /(^|\s)#{type}(\s|$)/).exists? == false }
-    else    
-      type = type.to_s
-      kind = [:id, :name, :value, :text, :class]
-      kind.collect { |k| @browser.button(k, type).click unless @browser.button(k, /(^|\s)#{type}(\s|$)/).exists? == false }
-    end
-    #   if @browser.button(:id, type).exists? then
-    #      @browser.button(:id, type).click
-    #   elsif
-    #      @browser.button(:name, type).exists? then
-    #      @browser.button(:name, type).click
-    #   elsif
-    #      @browser.button(:value, type).exists? then
-    #      @browser.button(:value, type).click
-    #   elsif
-    #      @browser.button(:text, type).exists? then
-    #      @browser.button(:text, type).click
-    #   elsif
-    #     @browser.button(:class, type).exists? then
-    #     @browser.button(:class, type).click
-    #   else
-    #     fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
-    #   end
-    # end
+      # kind = [:id, :name, :value, :text, :class, :type]
+      # kind.collect { |k| @browser.button(k, type).click unless @browser.button(k, /(^|\s)#{type}(\s|$)/).exists? == false }
+      if @browser.button(:id, type).exists? then
+         @browser.button(:id, type).click
+      elsif
+         @browser.button(:name, type).exists? then
+         @browser.button(:name, type).click
+      elsif
+         @browser.button(:value, type).exists? then
+         @browser.button(:value, type).click
+      elsif
+         @browser.button(:text, type).exists? then
+         @browser.button(:text, type).click
+      elsif
+        @browser.button(:class, type).exists? then
+        @browser.button(:class, type).click
+      else
+        fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+      end
   end
+  
   def find_checkbox(type)
-    if type == Fixnum then
-      type = type.to_i
-      kind = [:id]
-      kind.collect { |k| @browser.checkbox(k, type).click unless @browser.checkbox(k, /(^|\s)#{type}(\s|$)/).exists? == false }
-    else
-      type = type.to_s
-      kind = [:id, :name, :text, :class]
-      kind.collect { |k| @browser.checkbox(k, type).click unless @browser.checkbox(k, /(^|\s)#{type}(\s|$)/).exists? == false }
-    end
-    # if @browser.checkbox(:id, /#{type}/).exists? then
-    #      @browser.checkbox(:id, /#{type}/).click
-    #   elsif
-    #      @browser.checkbox(:name, type).exists? then
-    #      @browser.checkbox(:name, type).click
-    #   elsif
-    #      @browser.checkbox(:value, type).exists? then
-    #      @browser.checkbox(:value, type).click
-    #   elsif
-    #      @browser.checkbox(:text, type).exists? then
-    #      @browser.checkbox(:text, type).click
-    #   elsif
-    #     @browser.checkbox(:class, type).exists? then
-    #     @browser.checkbox(:class, type).click
-    #   else
-    #     fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
-    #   end
+    # if type == Fixnum then
+    #   type = type.to_i
+    #   kind = [:id]
+    #   kind.collect { |k| @browser.checkbox(k, type).click unless @browser.checkbox(k, /(^|\s)#{type}(\s|$)/).exists? == false }
+    # else
+    #   type = type.to_s
+    #   kind = [:id, :name, :text, :class]
+    #   kind.collect { |k| @browser.checkbox(k, type).click unless @browser.checkbox(k, /(^|\s)#{type}(\s|$)/).exists? == false }
+    # end
+    if @browser.checkbox(:id, /#{type}/).exists? then
+        @browser.checkbox(:id, /#{type}/).click
+     elsif
+        @browser.checkbox(:name, type).exists? then
+        @browser.checkbox(:name, type).click
+     elsif
+        @browser.checkbox(:value, type).exists? then
+        @browser.checkbox(:value, type).click
+     elsif
+        @browser.checkbox(:text, type).exists? then
+        @browser.checkbox(:text, type).click
+     elsif
+       @browser.checkbox(:class, type).exists? then
+       @browser.checkbox(:class, type).click
+     else
+       fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+     end
   end
 
   def find_image(type)
-    if type == Fixnum then
-      type.to_i    
-      kind = [:id]
-      kind.collect { |k| @browser.image(k, type).click unless @browser.link(k, /(^|\s)#{type}(\s|$)/).exists? == false }
-    else
-      type.to_s    
-      kind = [:src, :id, :name, :text, :class]
-      kind.collect { |k| @browser.link(k, type).click unless @browser.link(k, /(^|\s)#{type}(\s|$)/).exists? == false }
-    end
     # if type == Fixnum then
-    #     type = type.to_i
-    #     @browser.image(:index, type).click
-    #   end
-    #   if @browser.image(:src, /#{type}/).exists? then
-    #      @browser.image(:src, /#{type}/).click
-    #   elsif 
-    #     @browser.image(:id, type).exists? then
-    #     @browser.image(:id, type).click
-    #   elsif 
-    #     @browser.image(:name, type).exists? then
-    #     @browser.image(:name, type).click
-    #   elsif 
-    #     @browser.image(:text, type).exists? then
-    #     @browser.image(:text, type).click
-    #   elsif 
-    #     @browser.image(:class, type).exists? then
-    #     @browser.image(:class, type).click
-    #   else
-    #     fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
-    #   end
+    #   type.to_i    
+    #   kind = [:id]
+    #   kind.collect { |k| @browser.image(k, type).click unless @browser.link(k, /(^|\s)#{type}(\s|$)/).exists? == false }
+    # else
+    #   type.to_s    
+    #   kind = [:src, :id, :name, :text, :class]
+    #   kind.collect { |k| @browser.link(k, type).click unless @browser.link(k, /(^|\s)#{type}(\s|$)/).exists? == false }
+    # end
+
+      if @browser.image(:src, /#{type}/).exists? then
+         @browser.image(:src, /#{type}/).click
+      elsif 
+        @browser.image(:id, type).exists? then
+        @browser.image(:id, type).click
+      elsif 
+        @browser.image(:name, type).exists? then
+        @browser.image(:name, type).click
+      elsif 
+        @browser.image(:text, type).exists? then
+        @browser.image(:text, type).click
+      elsif 
+        @browser.image(:class, type).exists? then
+        @browser.image(:class, type).click
+      else
+        fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+      end
   end
 
   def find_link(type)
-    if type == Fixnum then
-      type.to_i    
-      kind = [:id]
-      kind.collect { |k| @browser.link(k, type).click unless @browser.link(k, /(^|\s)#{type}(\s|$)/).exists? == false }
+    # if type == Fixnum then
+    #   type.to_i    
+    #   kind = [:id]
+    #   kind.collect { |k| @browser.link(k, type).click unless @browser.link(k, /(^|\s)#{type}(\s|$)/).exists? == false }
+    # else
+    #   type.to_s    
+    #   kind = [:text, :class]
+    #   kind.collect { |k| @browser.link(k, type).click unless @browser.link(k, /(^|\s)#{type}(\s|$)/).exists? == false }
+    # end
+    if @browser.link(:text, type).exists? then
+       @browser.link(:text, type).click
+ elsif @browser.link(:class, /(^|\s)#{type}(\s|$)/).exists? then
+       @browser.link(:class, /(^|\s)#{type}(\s|$)/).click
     else
-      type.to_s    
-      kind = [:text, :class]
-      kind.collect { |k| @browser.link(k, type).click unless @browser.link(k, /(^|\s)#{type}(\s|$)/).exists? == false }
+      fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
     end
- #    if @browser.link(:text, type).wait_until_present then
- #       @browser.link(:text, type).click
- # elsif @browser.link(:class, /(^|\s)#{type}(\s|$)/).wait_until_present then
- #       @browser.link(:class, /(^|\s)#{type}(\s|$)/).click
- #    else
- #      fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
- #    end
   end
 
   def find_radio_button(type)
-    if type == Fixnum then
-      type.to_i    
-      kind = [:id]
-      kind.collect { |k| @browser.radio(k, type).click unless @browser.radio(k, /(^|\s)#{type}(\s|$)/).exists? == false }
-    else
-      type.to_s    
-      kind = [:text, :class]
-      kind.collect { |k| @browser.radio(k, type).click unless @browser.radio(k, /(^|\s)#{type}(\s|$)/).exists? == false }
-    end
-    # if @browser.radio(:id, type).exists? then
-    #      @browser.radio(:id, type).click
-    #   elsif 
-    #     @browser.radio(:name, type).exists? then
-    #     @browser.radio(:name, type).click
-    #   elsif 
-    #     @browser.radio(:value, type).exists? then
-    #     @browser.radio(:value, type).click
-    #   elsif 
-    #     @browser.radio(:text, type).exists? then
-    #     @browser.radio(:text, type).click
-    #   elsif 
-    #     @browser.radio(:class, type).exists? then
-    #     @browser.radio(:class, type).click
-    #   else
-    #     fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
-    #   end
+    # if type == Fixnum then
+    #   type.to_i    
+    #   kind = [:id]
+    #   kind.collect { |k| @browser.radio(k, type).click unless @browser.radio(k, /(^|\s)#{type}(\s|$)/).exists? == false }
+    # else
+    #   type.to_s    
+    #   kind = [:text, :class]
+    #   kind.collect { |k| @browser.radio(k, type).click unless @browser.radio(k, /(^|\s)#{type}(\s|$)/).exists? == false }
+    # end
+    if @browser.radio(:id, type).exists? then
+         @browser.radio(:id, type).click
+      elsif 
+        @browser.radio(:name, type).exists? then
+        @browser.radio(:name, type).click
+      elsif 
+        @browser.radio(:value, type).exists? then
+        @browser.radio(:value, type).click
+      elsif 
+        @browser.radio(:text, type).exists? then
+        @browser.radio(:text, type).click
+      elsif 
+        @browser.radio(:class, type).exists? then
+        @browser.radio(:class, type).click
+      else
+        fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+      end
   end
 
   def find_select_list(text, type)
-    if type == Fixnum then
-      type = type.to_i
-      @browser.select_list(:index, type).select(text)
-    else
-      type = type.to_s
-      kind = [:id, :text, :class]
-      kind.collect { |k| @browser.select_list(k, type).select(text) unless @browser.select_list(k, /(^|\s)#{type}(\s|$)/).exists? == false }
-   end
+   #  if type == Fixnum then
+   #    type = type.to_i
+   #    @browser.select_list(:index, type).select(text)
+   #  else
+   #    type = type.to_s
+   #    kind = [:id, :text, :class]
+   #    kind.collect { |k| @browser.select_list(k, type).select(text) unless @browser.select_list(k, /(^|\s)#{type}(\s|$)/).exists? == false }
+   # end
       #  
-      # if @browser.select_list(:id, type).exists? then
-      #    @browser.select_list(:id, type).select(text)
-      # 
-      # elsif @browser.select_list(:name, type).exists? then
-      #       @browser.select_list(:name, type).select(text)
-      # 
-      # elsif @browser.select_list(:value, type).exists? then
-      #       @browser.select_list(:value, type).select(text)
-      # 
-      # elsif @browser.select_list(:text, type).exists? then
-      #       @browser.select_list(:text, type).select(text)
-      # 
-      # elsif @browser.select_list(:class, /(^|\s)#{type}(\s|$)/).exists? then
-      #       @browser.select_list(:class, /(^|\s)#{type}(\s|$)/).select(text)
-      # else
-      #   fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
-      # end
+      if @browser.select_list(:id, type).exists? then
+         @browser.select_list(:id, type).select(text)
+      
+      elsif @browser.select_list(:name, type).exists? then
+            @browser.select_list(:name, type).select(text)
+      
+      elsif @browser.select_list(:value, type).exists? then
+            @browser.select_list(:value, type).select(text)
+      
+      elsif @browser.select_list(:text, type).exists? then
+            @browser.select_list(:text, type).select(text)
+      
+      elsif @browser.select_list(:class, /(^|\s)#{type}(\s|$)/).exists? then
+            @browser.select_list(:class, /(^|\s)#{type}(\s|$)/).select(text)
+      else
+        fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+      end
   end
   
+  # def find_text_field_by_index(type, text)
+  #   type = type.to_i
+  #     puts type.class
+  #   @browser.text_field(:index, type).set(text) unless @browser.text_field(:index, type).exists? == false
+  # end
+    
   def find_text_field(type, text)
-    if type == Fixnum then
-      type = type.to_i
-      @browser.text_field(:index, type).set(text)
-    else
-      type = type.to_s
-      kind = [:id, :text, :class]
-      kind.collect { |k| @browser.text_field(k, /(^|\s)#{type}(\s|$)/).set(text) unless @browser.text_field(k, /(^|\s)#{type}(\s|$)/).exists? == false }
-    end
-    # kind.each do |k|
-    #   @browser.text_field(k, /(^|\s)#{type}(\s|$)/).set(text) unless @browser.text_field(k, /(^|\s)#{type}(\s|$)/).exists? == false
-    # end
-    # if @browser.text_field(:text, type).exits? then
-    #    @browser.text_field(:text, type).set(text)     
-    # elsif 
-    #   @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).exists? then
-    #   @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).set(text)    
+    # if type == ("0" || "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "10") then
+    #   type = type.to_i
+    #   puts "#{type.class}"
+    #   kind = [:index]
+    #   kind.collect { |k| @browser.text_field(k, type).set(text) unless @browser.text_field(k, type).exists? == false }
     # else
-    #   fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+    #   puts "#{type.class}"
+    #   kind = [:id, :text, :class, :name]
+    #   kind.collect { |k| @browser.text_field(k, /(^|\s)#{type}(\s|$)/).set(text) unless @browser.text_field(k, /(^|\s)#{type}(\s|$)/).exists? == false }
     # end
+
+    if @browser.text_field(:text, type).exits? then
+       @browser.text_field(:text, type).set(text)     
+    elsif 
+      @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).exists? then
+      @browser.text_field(:class, /(^|\s)#{type}(\s|$)/).set(text)    
+    else
+      fail("Sorry, I wasn't able to find the " + "'#{type}'" + " element ")
+    end
   end
   
 
